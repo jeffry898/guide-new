@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-background: #0A0F1E;
+  --color-brand-gold: #C9A84C;
+  --color-brand-light: #F8F6F0;
+  --color-brand-danger: #C0392B;
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-background text-brand-light font-sans antialiased;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-bold tracking-tight;
+  }
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #C9A84C 0%, #A68A3B 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(to bottom, #F8F6F0, #C9A84C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.premium-blur {
+  backdrop-filter: blur(12px);
+  background: rgba(10, 15, 30, 0.7);
+}
+
+.blurred-text {
+  filter: blur(8px);
+  user-select: none;
+  pointer-events: none;
+}
+
+.bold-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 4px;
+}
+
+.bold-card:hover {
+  border-color: #C9A84C;
+  background: rgba(201, 168, 76, 0.05);
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: flex;
+  width: fit-content;
+  animation: ticker 60s linear infinite;
+}

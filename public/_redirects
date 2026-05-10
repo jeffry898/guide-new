@@ -1,0 +1,6 @@
+# Static Export Redirects
+/risk-report/result/* /risk-report/result/index/index.html 200
+/guide/* /guide/index/index.html 200
+/onboard/* /onboard/index.html 200
+/product/* /product/index.html 200
+/* /index.html 200
