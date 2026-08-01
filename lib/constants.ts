@@ -55,8 +55,18 @@ export type GuideContent = {
     time_saved_weekly?: number;
     free_tool?: string;
     free_tool_url?: string;
+    prompt_snippet?: string;
     geniuzlab_upgrade?: string;
     icon?: string;
+    architecture_steps?: string[];
+  }[];
+  prompt_templates?: {
+    title: string;
+    use_case: string;
+    target_tool: string;
+    prompt: string;
+    variables?: string[];
+    setup_instructions?: string;
   }[];
   roi: {
     hours_saved_weekly: number;
@@ -68,6 +78,8 @@ export type GuideContent = {
       week: number;
       theme: string;
       actions: string[];
+      key_deliverable?: string;
+      time_saved_estimate?: string;
     }[];
   };
   geniuzlab: {
@@ -85,3 +97,4 @@ export type GuideContent = {
     share_text: string;
   };
 };
+

@@ -42,23 +42,31 @@ export interface ProfessionData {
 }
 
 function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingData, triggerData?: any) {
-  return `You are the world's leading AI business strategist and automation architect specializing in ${profession.name}s with 10,000+ client case studies.
+  return `You are the world's elite AI Systems Architect and High-Ticket Business Consultant specializing in ${profession.name}s, having engineered AI operational transformations for 10,000+ top-tier firms.
 
   TARGET PROFESSIONAL CONTEXT:
-  - Core Challenge: ${onboarding.challenge || 'Scaling revenue while reducing manual admin overload'}
-  - Team Size: ${onboarding.team_size || '1-5'}
-  - Monthly Target: ${onboarding.target || 'Growth'}
-  - Industry: ${profession.name}
-  - Client Revenue: ${profession.avg_revenue_client}
-  - Tools Used: ${JSON.stringify(profession.industry_tools)}
-  - Pain Points: ${JSON.stringify(profession.pain_points)}
-  - Automation Risk: ${profession.wef_automation_risk}%
+  - Industry / Role: ${profession.name}
+  - Core Challenge: ${onboarding.challenge || 'Scaling revenue while eliminating 80% of manual admin overload'}
+  - Team Scale: ${onboarding.team_size || '1-5'}
+  - Growth Target: ${onboarding.target || 'High Growth'}
+  - Revenue Benchmarks: ${profession.avg_revenue_client}
+  - Current Tool Stack: ${JSON.stringify(profession.industry_tools)}
+  - Operational Pain Points: ${JSON.stringify(profession.pain_points)}
+  - Industry Automation Threat Level: ${profession.wef_automation_risk}%
 
-  Generate a comprehensive, world-class AI Survival Protocol & Digital Live Guide titled '${profession.psychological_title}'.
+  YOUR GOAL:
+  Generate an elite, $1,000-value Masterclass Protocol & Interactive Execution Guide titled '${profession.psychological_title}'.
+  This protocol MUST provide extreme, non-generic, actionable value with ready-to-run prompt templates, step-by-step system setup guides, and variable tags for immediate sandbox testing.
 
-  STRICT INSTRUCTIONS:
-  Return VALID JSON ONLY. NO MARKDOWN BLOCK, NO PREAMBLE.
-  Use this exact JSON schema:
+  CRITICAL QUALITY & CONTENT RULES:
+  1. DO NOT write surface-level advice or generic AI summaries. Write precise, professional SOPs and copy-paste prompt scripts.
+  2. Include EXACT VARIABLE BRACKETS inside prompts like [CLIENT_NAME], [PROJECT_SCOPE], [TARGET_METRIC], [SERVICE_OFFERING] so users can test them interactively.
+  3. Provide 5 DISTINCT AI Systems, each with 3-4 concrete step-by-step setup instructions.
+  4. Provide 5 MASTER EXECUTION PROMPTS with custom variable definitions.
+
+  STRICT JSON OUTPUT REQUIRED:
+  Return VALID JSON ONLY. NO MARKDOWN WRAPPER, NO PREAMBLE.
+  Follow this exact schema:
   {
     "hero": {
       "title": "string",
@@ -86,7 +94,8 @@ function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingDat
         "free_tool_url": "string",
         "prompt_snippet": "string",
         "geniuzlab_upgrade": "string",
-        "icon": "string"
+        "icon": "string",
+        "architecture_steps": ["Step 1...", "Step 2...", "Step 3...", "Step 4..."]
       }
     ],
     "prompt_templates": [
@@ -94,7 +103,9 @@ function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingDat
         "title": "string",
         "use_case": "string",
         "target_tool": "string",
-        "prompt": "string"
+        "prompt": "Full master prompt with [VARIABLE_1], [VARIABLE_2] placeholders...",
+        "variables": ["VARIABLE_1", "VARIABLE_2"],
+        "setup_instructions": "How to configure and run this prompt in ChatGPT / Claude / Cursor"
       }
     ],
     "roi": {
@@ -105,10 +116,11 @@ function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingDat
     "roadmap": {
       "weeks": [
         {
-          "week": number,
+          "week": 1,
           "theme": "string",
-          "actions": ["string", "string", "string"],
-          "key_deliverable": "string"
+          "actions": ["Action item 1", "Action item 2", "Action item 3"],
+          "key_deliverable": "string",
+          "time_saved_estimate": "e.g. 5 Hours/Week Saved"
         }
       ]
     },
