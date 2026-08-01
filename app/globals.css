@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-background: #0A0F1E;
+  --color-brand-background: #060A14;
+  --color-brand-surface: #0A0F1E;
   --color-brand-gold: #C9A84C;
+  --color-brand-gold-light: #E6C875;
   --color-brand-light: #F8F6F0;
-  --color-brand-danger: #C0392B;
+  --color-brand-danger: #DC2626;
   
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
@@ -13,30 +15,42 @@
 
 @layer base {
   body {
-    @apply bg-brand-background text-brand-light font-sans antialiased;
+    @apply bg-[#060A14] text-[#F8F6F0] font-sans antialiased;
     width: 100%;
     margin: 0;
     padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-bold tracking-tight;
+    @apply font-serif font-bold tracking-tight text-[#F8F6F0];
+  }
+
+  p {
+    @apply font-sans leading-relaxed text-gray-300;
   }
 }
 
+/* Gold Gradient Utilities */
 .gold-gradient {
-  background: linear-gradient(135deg, #C9A84C 0%, #A68A3B 100%);
+  background: linear-gradient(135deg, #C9A84C 0%, #E6C875 50%, #A68A3B 100%);
 }
 
 .text-gold-gradient {
-  background: linear-gradient(to bottom, #F8F6F0, #C9A84C);
+  background: linear-gradient(135deg, #F8F6F0 0%, #C9A84C 70%, #E6C875 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.gold-glow {
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.25);
+}
+
 .premium-blur {
-  backdrop-filter: blur(12px);
-  background: rgba(10, 15, 30, 0.7);
+  backdrop-filter: blur(16px);
+  background: rgba(6, 10, 20, 0.85);
 }
 
 .blurred-text {
@@ -45,17 +59,7 @@
   pointer-events: none;
 }
 
-.bold-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(201, 168, 76, 0.1);
-  border-radius: 4px;
-}
-
-.bold-card:hover {
-  border-color: #C9A84C;
-  background: rgba(201, 168, 76, 0.05);
-}
-
+/* Ticker Animation */
 @keyframes ticker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -64,5 +68,24 @@
 .animate-ticker {
   display: flex;
   width: fit-content;
-  animation: ticker 60s linear infinite;
+  animation: ticker 50s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #060A14;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.6);
 }
