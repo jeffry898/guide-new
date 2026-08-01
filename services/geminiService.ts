@@ -42,38 +42,36 @@ export interface ProfessionData {
 }
 
 function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingData, triggerData?: any) {
-  return `You are the world's leading AI business strategist 
-  specializing in ${profession.name}s with 10,000+ 
-  client case studies.
+  return `You are the world's leading AI business strategist and automation architect specializing in ${profession.name}s with 10,000+ client case studies.
 
-  THIS PERSON:
-  - Challenge: ${onboarding.challenge}
-  - Team size: ${onboarding.team_size}
-  - Monthly target: ${onboarding.target}
-  - Found via: ${triggerData?.keyword || 'direct'}
+  TARGET PROFESSIONAL CONTEXT:
+  - Core Challenge: ${onboarding.challenge || 'Scaling revenue while reducing manual admin overload'}
+  - Team Size: ${onboarding.team_size || '1-5'}
+  - Monthly Target: ${onboarding.target || 'Growth'}
+  - Industry: ${profession.name}
+  - Client Revenue: ${profession.avg_revenue_client}
+  - Tools Used: ${JSON.stringify(profession.industry_tools)}
+  - Pain Points: ${JSON.stringify(profession.pain_points)}
+  - Automation Risk: ${profession.wef_automation_risk}%
 
-  PROFESSION DATA:
-  - Avg revenue/client: ${profession.avg_revenue_client}
-  - Industry tools: ${JSON.stringify(profession.industry_tools)}
-  - Pain points: ${JSON.stringify(profession.pain_points)}
-  - WEF automation risk: ${profession.wef_automation_risk}%
+  Generate a comprehensive, world-class AI Survival Protocol & Digital Live Guide titled '${profession.psychological_title}'.
 
-  Generate guide titled: '${profession.psychological_title}'
-
-  RETURN VALID JSON ONLY. NO MARKDOWN. NO PREAMBLE:
+  STRICT INSTRUCTIONS:
+  Return VALID JSON ONLY. NO MARKDOWN BLOCK, NO PREAMBLE.
+  Use this exact JSON schema:
   {
     "hero": {
-      "title": string,
-      "subtitle": string,
-      "stat": string,
-      "stat_source": string
+      "title": "string",
+      "subtitle": "string",
+      "stat": "string",
+      "stat_source": "string"
     },
     "reality_check": {
-      "headline": string,
-      "insight": string,
+      "headline": "string",
+      "insight": "string",
       "chart": {
-        "title": string,
-        "labels": ["Current", "With AI Systems"],
+        "title": "string",
+        "labels": ["Current Manual Ops", "With AI Systems Layer"],
         "admin_time": [number, number],
         "core_work": [number, number],
         "revenue_growth": [number, number]
@@ -81,44 +79,54 @@ function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingDat
     },
     "ai_systems": [
       {
-        "title": string,
-        "description": string,
+        "title": "string",
+        "description": "string",
         "time_saved_weekly": number,
-        "free_tool": string,
-        "free_tool_url": string,
-        "geniuzlab_upgrade": string,
-        "icon": string
+        "free_tool": "string",
+        "free_tool_url": "string",
+        "prompt_snippet": "string",
+        "geniuzlab_upgrade": "string",
+        "icon": "string"
+      }
+    ],
+    "prompt_templates": [
+      {
+        "title": "string",
+        "use_case": "string",
+        "target_tool": "string",
+        "prompt": "string"
       }
     ],
     "roi": {
       "hours_saved_weekly": number,
       "annual_value": number,
-      "insight": string
+      "insight": "string"
     },
     "roadmap": {
       "weeks": [
         {
           "week": number,
-          "theme": string,
-          "actions": [string, string, string]
+          "theme": "string",
+          "actions": ["string", "string", "string"],
+          "key_deliverable": "string"
         }
       ]
     },
     "geniuzlab": {
-      "headline": string,
-      "body": string,
+      "headline": "string",
+      "body": "string",
       "services": [
         {
-          "name": string,
-          "description": string,
-          "icon": string
+          "name": "string",
+          "description": "string",
+          "icon": "string"
         }
       ],
-      "cta": string
+      "cta": "string"
     },
     "closing": {
-      "statement": string,
-      "share_text": string
+      "statement": "string",
+      "share_text": "string"
     }
   }`;
 }

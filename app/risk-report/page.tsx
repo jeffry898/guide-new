@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import { Profession } from '@/lib/constants';
 import { getProfessions } from '@/lib/professions-api';
-import { ArrowRight, ChevronDown, ShieldAlert, Loader2 } from 'lucide-react';
+import { ArrowRight, ChevronDown, ShieldAlert, Loader2, CheckCircle2, Lock, Sparkles, AlertTriangle } from 'lucide-react';
 
 export default function RiskReportLanding() {
   const router = useRouter();
@@ -39,19 +39,24 @@ export default function RiskReportLanding() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0F1E] text-[#F8F6F0]">
+    <div className="min-h-screen bg-[#060A14] text-[#F8F6F0]">
       <Navbar />
       
-      <main className="pt-40 pb-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <main className="pt-36 pb-24 px-6 relative overflow-hidden">
+        {/* Background Subtle Grid & Ambient Glow */}
+        <div className="absolute inset-0 z-0 opacity-[0.03]" 
+             style={{ backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)', backgroundSize: '30px 30px' }} />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#C9A84C]/10 blur-[140px] rounded-full pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full mb-12"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A0F1E] border border-[#C9A84C]/40 rounded-full mb-8 shadow-[0_0_20px_rgba(201,168,76,0.15)]"
           >
             <ShieldAlert className="w-4 h-4 text-[#C9A84C]" />
-            <span className="text-[10px] font-mono font-black text-[#C9A84C] uppercase tracking-widest">
-              GeniuzLab Intelligence Engine v2.0
+            <span className="text-xs font-mono font-bold text-[#C9A84C] uppercase tracking-widest">
+              2026 WEF DATASET // CONFIDENTIAL ASSESSMENT
             </span>
           </motion.div>
 
@@ -59,40 +64,44 @@ export default function RiskReportLanding() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-6xl md:text-8xl font-serif font-black leading-[0.9] tracking-tighter mb-8"
+            className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.05] tracking-tight mb-8"
           >
-            Find Out If AI Will <br />
-            <span className="text-[#C9A84C]">Replace You</span>
+            Calculate Your Profession&apos;s <br />
+            <span className="text-[#C9A84C]">AI Displacement Risk</span>
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl md:text-2xl text-[#F8F6F0]/60 font-light mb-16 max-w-2xl mx-auto"
+            className="text-lg md:text-2xl text-gray-300 font-light mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            Free personalised risk report based on World Economic Forum datasets. Takes 90 seconds.
+            Get an instant 90-second intelligence report analyzing task automation risk, income vulnerability, and protective AI action steps.
           </motion.p>
 
+          {/* Profession Selection Box */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="relative max-w-md mx-auto"
+            className="relative max-w-lg mx-auto mb-10"
           >
             <div className="relative">
               <button 
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full bg-white/5 border border-white/10 p-6 flex justify-between items-center rounded-[2px] text-lg font-bold hover:border-[#C9A84C]/50 transition-all text-left"
+                className="w-full bg-[#0A0F1E] border border-[#C9A84C]/40 p-5 flex justify-between items-center rounded-xl text-base md:text-lg font-mono font-bold text-[#F8F6F0] hover:border-[#C9A84C] transition-all text-left shadow-2xl"
               >
-                {profession ? profession.name : "Select your profession..."}
-                <ChevronDown className={`w-5 h-5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">{profession?.icon || '💼'}</span>
+                  <span>{profession ? profession.name : "Select your profession..."}</span>
+                </div>
+                <ChevronDown className={`w-5 h-5 text-[#C9A84C] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
               </button>
 
               {isOpen && (
-                <div className="absolute top-full left-0 w-full mt-2 bg-[#0c1224] border border-white/10 rounded-[2px] max-h-80 overflow-y-auto z-50 shadow-2xl">
+                <div className="absolute top-full left-0 w-full mt-2 bg-[#0A0F1E] border border-[#C9A84C]/40 rounded-xl max-h-80 overflow-y-auto z-50 shadow-2xl divide-y divide-white/5">
                   {loading ? (
-                    <div className="p-4 flex justify-center">
+                    <div className="p-6 flex justify-center">
                       <Loader2 className="w-6 h-6 text-[#C9A84C] animate-spin" />
                     </div>
                   ) : (
@@ -103,9 +112,15 @@ export default function RiskReportLanding() {
                           setSelectedProfession(p.slug);
                           setIsOpen(false);
                         }}
-                        className="w-full p-4 text-left hover:bg-[#C9A84C]/10 hover:text-[#C9A84C] border-b border-white/5 transition-colors text-sm font-bold uppercase tracking-widest"
+                        className="w-full px-5 py-4 text-left font-mono text-sm hover:bg-[#C9A84C]/10 flex items-center justify-between transition-colors group"
                       >
-                        {p.name}
+                        <div className="flex items-center gap-3">
+                          <span className="text-lg">{p.icon || '💼'}</span>
+                          <span className="font-semibold text-gray-200 group-hover:text-[#C9A84C]">{p.name}</span>
+                        </div>
+                        <span className="text-xs text-red-400 font-bold bg-red-950/40 border border-red-800/40 px-2 py-0.5 rounded">
+                          {p.automation_risk}% RISK
+                        </span>
                       </button>
                     ))
                   )}
@@ -116,26 +131,29 @@ export default function RiskReportLanding() {
             <button
               onClick={handleStart}
               disabled={!selectedProfession}
-              className={`w-full mt-6 py-6 rounded-[2px] font-black uppercase tracking-[0.2em] flex items-center justify-center gap-4 transition-all ${
+              className={`w-full mt-4 py-5 px-8 rounded-xl font-mono font-black text-sm uppercase tracking-widest transition-all flex items-center justify-center gap-3 shadow-2xl ${
                 selectedProfession 
-                ? 'bg-[#C9A84C] text-[#0A0F1E] hover:scale-[1.02]' 
-                : 'bg-white/5 text-white/20 cursor-not-allowed'
+                  ? 'bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] shadow-[0_0_30px_rgba(201,168,76,0.4)] cursor-pointer' 
+                  : 'bg-gray-800 text-gray-500 cursor-not-allowed border border-white/5'
               }`}
             >
-              Check My Risk <ArrowRight className="w-5 h-5" />
+              <span>GENERATE CONFIDENTIAL RISK REPORT</span>
+              <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 opacity-40 text-[10px] font-mono font-bold uppercase tracking-widest"
-          >
-            <div>NO CREDIT CARD REQUIRED</div>
-            <div>STRICTLY CONFIDENTIAL</div>
-            <div>CITING WEF 2025 DATA</div>
-          </motion.div>
+          {/* Social Proof & Security Badges */}
+          <div className="flex flex-wrap justify-center items-center gap-8 text-xs font-mono text-gray-400">
+            <span className="flex items-center gap-1.5">
+              <CheckCircle2 className="w-4 h-4 text-[#C9A84C]" /> 14,290+ Reports Generated
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Lock className="w-4 h-4 text-[#C9A84C]" /> 100% Free & Confidential
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-[#C9A84C]" /> Instant 90-Second Analysis
+            </span>
+          </div>
         </div>
       </main>
     </div>
