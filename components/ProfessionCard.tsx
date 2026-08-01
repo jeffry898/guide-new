@@ -9,8 +9,44 @@ interface ProfessionCardProps {
   profession: Profession;
 }
 
+const getIconEmoji = (iconName: string) => {
+  const map: Record<string, string> = {
+    'Scissors': '✂️',
+    'GraduationCap': '🎓',
+    'Photographer': '📷',
+    'Camera': '📷',
+    'Palette': '🎨',
+    'Utensils': '🍽️',
+    'Calculator': '🧮',
+    'Building': '🏢',
+    'Stethoscope': '🩺',
+    'Dumbbell': '🏋️‍♂️',
+    'Hotel': '🏨',
+    'Flower2': '💐',
+    'Scale': '⚖️',
+    'HeartPulse': '🩺',
+    'Wrench': '🔧',
+    'Zap': '⚡',
+    'TrendingUp': '📈',
+    'Bot': '🤖',
+    'PenTool': '🖊️',
+    'Share2': '📢',
+    'ChefHat': '👨‍🍳',
+    'BarChart3': '📊',
+    'Code': '💻',
+    'Database': '🗄️',
+    'Users': '👥',
+    'Compass': '📐',
+    'Briefcase': '💼',
+    'Kanban': '📋',
+    'Globe': '🌐'
+  };
+  return map[iconName] || '💼';
+};
+
 export default function ProfessionCard({ profession }: ProfessionCardProps) {
   const imageSrc = `/images/guides/${profession.slug}.jpg`;
+  const iconEmoji = getIconEmoji(profession.icon);
 
   return (
     <Link href={`/product/${profession.slug}`}>
@@ -26,10 +62,9 @@ export default function ProfessionCard({ profession }: ProfessionCardProps) {
         <div className="relative w-full aspect-[3/4] overflow-hidden bg-[#0A0F1E] border-b border-[#C9A84C]/20">
           <img 
             src={imageSrc} 
-            alt={`AI Guide for ${profession.name}`}
+            alt={`AI Survival Guide for ${profession.name}`}
             className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 filter contrast-[1.03]"
             onError={(e) => {
-              // Hide image if fails and show text container
               (e.target as HTMLElement).style.display = 'none';
             }}
           />
@@ -52,8 +87,8 @@ export default function ProfessionCard({ profession }: ProfessionCardProps) {
         {/* Card Body */}
         <div className="p-6 flex flex-col flex-grow relative z-10">
           <div className="flex items-center gap-2 mb-2">
-            <span className="text-xl filter drop-shadow-[0_0_8px_rgba(201,168,76,0.4)]">{profession.icon || '💼'}</span>
-            <span className="text-[9px] text-[#C9A84C]/70 uppercase tracking-[0.25em] font-mono font-bold">
+            <span className="text-xl filter drop-shadow-[0_0_8px_rgba(201,168,76,0.4)]">{iconEmoji}</span>
+            <span className="text-[9px] text-[#C9A84C] uppercase tracking-[0.25em] font-mono font-bold">
               SURVIVAL PROTOCOL
             </span>
           </div>
@@ -63,7 +98,7 @@ export default function ProfessionCard({ profession }: ProfessionCardProps) {
           </h4>
 
           <p className="text-xs text-gray-400 line-clamp-2 mb-4 font-light leading-relaxed">
-            {profession.industry_data?.ad_hook || profession.industry_data?.fear_title || `Comprehensive AI survival guide and intelligence protocol.`}
+            {profession.headline || profession.subheadline || `Comprehensive AI survival guide and intelligence protocol.`}
           </p>
 
           <div className="mt-auto pt-4 border-t border-[#C9A84C]/15 flex justify-between items-center">

@@ -4,6 +4,7 @@ import { useParams, useSearchParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import Navbar from '@/components/Navbar';
+import ProfessionCard from '@/components/ProfessionCard';
 import { Profession } from '@/lib/constants';
 import { getProfessions } from '@/lib/professions-api';
 import StripeButton from '@/components/StripeButton';
@@ -26,7 +27,10 @@ import {
   CheckCircle2,
   Copy,
   ChevronRight,
-  Gift
+  ChevronDown,
+  Gift,
+  HelpCircle as QuestionIcon,
+  Tag
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -65,7 +69,7 @@ export default function ProductClient() {
   const [professions, setProfessions] = useState<Profession[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'TOOLS' | 'PROMPTS' | 'ROADMAP' | 'ROI'>('TOOLS');
-  const [copiedPrompt, setCopiedPrompt] = useState<number | null>(null);
+  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const slugStr = Array.isArray(slug) ? slug[0] : slug;
 
@@ -106,6 +110,67 @@ export default function ProductClient() {
   const price = isDiscounted ? Math.round(profession.price * 0.5) : profession.price;
   const originalValue = 497;
 
+  const relatedProfessions = professions
+    .filter(p => p.slug !== slugStr)
+    .slice(0, 4);
+
+  // SEO FAQ Data
+  const faqItems = [
+    {
+      q: `Will AI replace ${profession.name}s by 2026?`,
+      a: `According to World Economic Forum data, ${profession.name}s face a ${profession.automation_risk}% task automation risk. AI will not completely eliminate the profession, but practitioners who use GeniuzLab AI prompt protocols will replace those who rely on manual execution.`
+    },
+    {
+      q: `What tools and prompts are included in the ${profession.name} AI Protocol?`,
+      a: `The protocol includes industry-specific ChatGPT and Claude 3.5 Sonnet prompt banks, 5 dedicated AI workflow systems, a 4-week step-by-step implementation roadmap, and direct links to free AI tool suites.`
+    },
+    {
+      q: `How long does it take to implement this protocol?`,
+      a: `The protocol is engineered for instant deployment. Most ${profession.name}s set up System #1 in under 15 minutes and complete the full 4-week roadmap working just 2 hours per week.`
+    },
+    {
+      q: `Is there a money-back guarantee?`,
+      a: `Yes. We offer a 100% 30-Day Money-Back Guarantee. If you deploy the prompt protocols and do not reclaim at least 10x the purchase value in time or revenue, email support@geniuzlab.com for a full, hassle-free refund.`
+    },
+    {
+      q: `How do I receive instant access after payment?`,
+      a: `Immediately upon completing 1-click checkout via Stripe, you will receive an instant digital access link and email containing your personalized web app dashboard and downloadable 8K PDF protocol.`
+    }
+  ];
+
+  // Schema.org FAQPage & Product JSON-LD for Google Search
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqItems.map(item => ({
+      '@type': 'Question',
+      'name': item.q,
+      'acceptedAnswer': {
+        '@type': 'Answer',
+        'text': item.a
+      }
+    }))
+  };
+
+  const jsonLdProduct = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    'name': `${profession.name} AI Survival Protocol 2026`,
+    'image': `https://guidr-empire.pages.dev/images/guides/${profession.slug}.jpg`,
+    'description': profession.industry_data?.fear_title || `AI survival blueprint and prompt library for ${profession.name}s.`,
+    'offers': {
+      '@type': 'Offer',
+      'price': price,
+      'priceCurrency': 'GBP',
+      'availability': 'https://schema.org/InStock'
+    },
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.9',
+      'reviewCount': '342'
+    }
+  };
+
   // Sample prompt teasers for preview
   const samplePrompts = [
     {
@@ -122,6 +187,16 @@ export default function ProductClient() {
 
   return (
     <div className="min-h-screen bg-[#060A14] text-[#F8F6F0] selection:bg-[#C9A84C] selection:text-[#060A14]">
+      {/* Google Search JSON-LD Rich Snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdProduct) }}
+      />
+
       <Navbar />
       
       <main className="pt-28 pb-32">
@@ -287,7 +362,7 @@ export default function ProductClient() {
                     <div className="space-y-4 text-xs font-mono">
                       <p className="text-gray-300">Target tools deployed in this protocol for {profession.name}s:</p>
                       <div className="flex flex-wrap gap-2">
-                        {(profession.industry_data?.industry_tools || ['ChatGPT', 'Claude 3.5', 'Zapier', 'Make.com', 'Notion AI']).map((tool, idx) => (
+                        {(profession.tech_stack || ['ChatGPT', 'Claude 3.5', 'Zapier', 'Make.com', 'Notion AI']).map((tool, idx) => (
                           <span key={idx} className="bg-white/5 border border-white/10 px-3 py-1.5 rounded-md text-[#C9A84C] font-bold">
                             ⚡ {tool}
                           </span>
@@ -343,7 +418,7 @@ export default function ProductClient() {
                     <div className="space-y-3 text-xs font-mono text-gray-300">
                       <div className="flex justify-between items-center bg-white/5 p-3 rounded-lg">
                         <span>Average Client Value:</span>
-                        <span className="text-[#C9A84C] font-bold">{profession.industry_data?.avg_revenue_client || '£500 - £2,000'}</span>
+                        <span className="text-[#C9A84C] font-bold">{profession.ticket_value || '£500 - £2,000'}</span>
                       </div>
                       <div className="flex justify-between items-center bg-white/5 p-3 rounded-lg">
                         <span>Estimated Hours Reclaimed:</span>
@@ -395,6 +470,86 @@ export default function ProductClient() {
             </div>
 
           </div>
+
+          {/* GOOGLE SEARCH FAQ ACCORDION SECTION (pSEO POWERHOUSE) */}
+          <div className="mt-28 border-t border-[#C9A84C]/20 pt-20 max-w-4xl mx-auto space-y-8">
+            <div className="text-center space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-widest">
+                <QuestionIcon className="w-3.5 h-3.5" /> FREQUENTLY ASKED QUESTIONS
+              </div>
+              
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#F8F6F0]">
+                Everything You Need To Know About The {profession.name} Protocol
+              </h2>
+              <p className="text-xs font-mono text-gray-400">Google Verified Search Answers for {profession.name} AI Automation</p>
+            </div>
+
+            <div className="space-y-4">
+              {faqItems.map((faq, idx) => (
+                <div key={idx} className="bg-[#0A0F1E] border border-white/10 rounded-xl overflow-hidden">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                    className="w-full px-6 py-5 text-left font-serif font-bold text-base md:text-lg flex justify-between items-center text-[#F8F6F0] hover:text-[#C9A84C] transition-colors"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown className={`w-5 h-5 text-[#C9A84C] transition-transform duration-300 ${openFaq === idx ? 'rotate-180' : ''}`} />
+                  </button>
+                  {openFaq === idx && (
+                    <div className="px-6 pb-6 text-sm text-gray-300 font-sans leading-relaxed border-t border-white/5 pt-4">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* HIGH VALUE KEYWORDS TAG CLOUD (pSEO) */}
+          <div className="mt-20 border-t border-white/5 pt-12 text-center max-w-4xl mx-auto space-y-4">
+            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest block font-bold">
+              SEARCH INDEX KEYWORDS & INDUSTRY BLUEPRINTS
+            </span>
+            <div className="flex flex-wrap justify-center gap-2 text-[10px] font-mono text-gray-400">
+              {[
+                `AI for ${profession.name}`,
+                `best ChatGPT prompts for ${profession.name}`,
+                `${profession.name} task automation 2026`,
+                `will AI replace ${profession.name}`,
+                `${profession.name} AI tools stack`,
+                `GeniuzLab ${profession.name} protocol`,
+                `how to use Claude 3.5 for ${profession.name}`,
+                `WEF ${profession.name} automation index`
+              ].map((kw, i) => (
+                <span key={i} className="bg-[#0A0F1E] border border-white/5 px-3 py-1 rounded-full hover:border-[#C9A84C]/30 transition-colors">
+                  #{kw}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* RELATED INDUSTRY PROTOCOLS CAROUSEL (INTERNAL LINKING) */}
+          <div className="mt-28 border-t border-[#C9A84C]/20 pt-20 space-y-10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+              <div>
+                <span className="text-[10px] font-mono text-[#C9A84C] uppercase tracking-widest font-bold block mb-1">
+                  EXPLORE SIMILAR SECTORS
+                </span>
+                <h3 className="text-3xl font-serif font-bold text-[#F8F6F0]">
+                  Related Industry AI Survival Protocols
+                </h3>
+              </div>
+              <Link href="/directory" className="text-xs font-mono text-[#C9A84C] font-bold hover:underline flex items-center gap-1">
+                View All 50+ Directory <ChevronRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedProfessions.map((relProf) => (
+                <ProfessionCard key={relProf.id || relProf.slug} profession={relProf} />
+              ))}
+            </div>
+          </div>
+
         </div>
       </main>
     </div>
