@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
     "start": "next start -p 3000",
     "lint": "eslint .",
     "clean": "next clean",
@@ -37,6 +38,7 @@
     "tsx": "^4.21.0"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@tailwindcss/postcss": "4.1.11",
     "@tailwindcss/typography": "^0.5.19",
     "@types/dotenv": "^6.1.1",
