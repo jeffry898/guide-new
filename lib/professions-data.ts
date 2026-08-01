@@ -752,6 +752,467 @@ export const PROFESSIONS = [
       meta_title: 'AI Survival Guide for Translators — 2026 Localization Engine',
       meta_description: 'How translators pivot to high-paid AI localization specialists'
     }
+  },
+  {
+    name: 'Cybersecurity Analyst',
+    slug: 'cybersecurity-analyst',
+    price: 99,
+    automation_risk: 35,
+    industry_data: {
+      icon: 'Shield',
+      psychological_title: 'The Neural Defense Protocol',
+      fear_title: 'AI-Driven Cyber Threats Demand AI Defense Engines',
+      ad_hook: 'Automate SOC log triage, threat hunting, and incident response in real time',
+      pain_points: ['Alert fatigue', 'False positive overload', 'Zero-day vulnerability velocity'],
+      industry_tools: ['Splunk', 'CrowdStrike', 'Wireshark', 'Python', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£85,000 - £160,000 Salary',
+      onboarding_questions: [
+        { q: 'Security domain?', options: ['SOC Triage', 'Penetration Testing', 'Cloud Security'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Threat Triage Engine', icon: '🛡️', description: 'Filter 10,000 SIEM alerts per minute automatically' }
+      ],
+      meta_title: 'AI Survival Guide for Cybersecurity Analysts — 2026 Defense',
+      meta_description: 'Automate SOC log analysis and threat hunting using AI'
+    }
+  },
+  {
+    name: 'Content Creator',
+    slug: 'content-creator',
+    price: 39,
+    automation_risk: 49,
+    industry_data: {
+      icon: 'Video',
+      psychological_title: 'The Multi-Platform Media Engine',
+      fear_title: 'Turn 1 Video into 50 Pieces of Content Instantly',
+      ad_hook: 'Automate scriptwriting, editing workflows, and multi-channel publishing',
+      pain_points: ['Content burnout', 'Editing bottleneck', 'Multi-platform adaptation'],
+      industry_tools: ['Premiere Pro', 'Descript', 'Midjourney', 'CapCut', 'ChatGPT'],
+      avg_revenue_client: '£30,000 - £150,000+ Revenue',
+      onboarding_questions: [
+        { q: 'Primary channel?', options: ['YouTube', 'TikTok/Instagram', 'Newsletter/Blog'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Script & Repurposer', icon: '🎬', description: 'Convert long videos into viral short scripts in seconds' }
+      ],
+      meta_title: 'AI Survival Guide for Content Creators — 2026 Media Scaling',
+      meta_description: 'How top creators leverage AI to scale content 10x with zero burnout'
+    }
+  },
+  {
+    name: 'Talent Recruiter',
+    slug: 'recruiter',
+    price: 59,
+    automation_risk: 76,
+    industry_data: {
+      icon: 'Users',
+      psychological_title: 'The Executive Sourcing Engine',
+      fear_title: 'Sourcing & Cold Outreach Are Being Automated by AI Bots',
+      ad_hook: 'Source, qualify, and message 200 passive candidates per day automatically',
+      pain_points: ['Low candidate response rates', 'Manual LinkedIn Recruiter boolean searches', 'Candidate ghosting'],
+      industry_tools: ['LinkedIn Recruiter', 'Greenhouse', 'Interseller', 'ChatGPT', 'Apollo.io'],
+      avg_revenue_client: '£5,000 - £25,000 Placement Fee',
+      onboarding_questions: [
+        { q: 'Recruiting sector?', options: ['Tech/Engineering', 'Finance/Legal', 'Healthcare'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Candidate Outreach Bot', icon: '✉️', description: 'Send hyper-personalized outreach that converts at 35%' }
+      ],
+      meta_title: 'AI Survival Guide for Recruiters — 2026 Sourcing Engine',
+      meta_description: 'Automate candidate sourcing and outreach with higher response rates'
+    }
+  },
+  {
+    name: 'Supply Chain Manager',
+    slug: 'supply-chain-manager',
+    price: 79,
+    automation_risk: 64,
+    industry_data: {
+      icon: 'Truck',
+      psychological_title: 'The Autonomous Logistics Engine',
+      fear_title: 'Predict Inventory Bottlenecks Before They Cause Delays',
+      ad_hook: 'Automate inventory forecasting, supplier tracking, and freight routing',
+      pain_points: ['Inventory stockouts', 'Supplier delay friction', 'Freight cost volatility'],
+      industry_tools: ['SAP SCM', 'Oracle SCM', 'Excel', 'Python', 'ChatGPT'],
+      avg_revenue_client: '£70,000 - £130,000 Salary',
+      onboarding_questions: [
+        { q: 'Supply chain scale?', options: ['Regional', 'National', 'Global Multi-tier'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Predictive Stock Forecasting', icon: '📦', description: 'Forecast demand volatility 60 days in advance' }
+      ],
+      meta_title: 'AI Survival Guide for Supply Chain Managers — 2026 Logistics',
+      meta_description: 'How logistics leaders use predictive AI to eliminate stockouts'
+    }
+  },
+  {
+    name: 'Veterinarian',
+    slug: 'veterinarian',
+    price: 89,
+    automation_risk: 22,
+    industry_data: {
+      icon: 'HeartPulse',
+      psychological_title: 'The Clinical Diagnostic Assistant',
+      fear_title: 'Automate Medical Charting & Client Follow-Ups Instantly',
+      ad_hook: 'Reclaim 10 hours a week from SOAP note drafting and lab review',
+      pain_points: ['SOAP note paperwork', 'Client phone triage overload', 'Diagnostic review lag'],
+      industry_tools: ['eVetPractice', 'Cornerstone', 'ChatGPT Enterprise', 'Otter.ai'],
+      avg_revenue_client: '£60,000 - £110,000 Salary',
+      onboarding_questions: [
+        { q: 'Practice type?', options: ['Small Animal', 'Equine/Livestock', 'Specialty Surgical'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI SOAP Note Scribe', icon: '📋', description: 'Draft comprehensive clinical notes from ambient audio in seconds' }
+      ],
+      meta_title: 'AI Survival Guide for Veterinarians — Clinical Efficiency 2026',
+      meta_description: 'Automate vet clinical notes and client triage with AI scribes'
+    }
+  },
+  {
+    name: 'Physiotherapist',
+    slug: 'physiotherapist',
+    price: 49,
+    automation_risk: 25,
+    industry_data: {
+      icon: 'Activity',
+      psychological_title: 'The Biometric Rehab Protocol',
+      fear_title: 'Generate Personalized Home Exercise Programs in 30 Seconds',
+      ad_hook: 'Boost patient adherence by 50% with AI video rehab plans',
+      pain_points: ['Patient compliance dropoff', 'Manual documentation', 'Home exercise plan creation'],
+      industry_tools: ['Physiotec', 'Cliniko', 'ChatGPT', 'Canva'],
+      avg_revenue_client: '£45,000 - £85,000 Income',
+      onboarding_questions: [
+        { q: 'Specialty?', options: ['Sports Rehab', 'Orthopedic', 'Neurological'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Rehab Plan Generator', icon: '🏃‍♂️', description: 'Generate custom exercise protocols with video guidance' }
+      ],
+      meta_title: 'AI Survival Guide for Physiotherapists — 2026 Rehab Tech',
+      meta_description: 'Automate rehab documentation and boost patient adherence with AI'
+    }
+  },
+  {
+    name: 'Fitness Coach',
+    slug: 'fitness-coach',
+    price: 39,
+    automation_risk: 32,
+    industry_data: {
+      icon: 'Dumbbell',
+      psychological_title: 'The High-Performance Scaling Engine',
+      fear_title: 'Scale From 20 to 200 Clients Without Burnout',
+      ad_hook: 'Automate meal plans, workout logging, and check-ins with AI assistants',
+      pain_points: ['Client check-in fatigue', 'Macro plan creation time', 'Client churn'],
+      industry_tools: ['Trainerize', 'MyFitnessPal', 'WhatsApp', 'ChatGPT'],
+      avg_revenue_client: '£150 - £600 / month per client',
+      onboarding_questions: [
+        { q: 'Coaching format?', options: ['Online 1-on-1', 'In-Person Gym', 'Group Fitness'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Client Check-in Assistant', icon: '💪', description: 'Analyze client weekly data & draft feedback in 10 seconds' }
+      ],
+      meta_title: 'AI Survival Guide for Fitness Coaches — 2026 Client Scaling',
+      meta_description: 'How online fitness coaches use AI to scale client capacity 5x'
+    }
+  },
+  {
+    name: 'Tax Consultant',
+    slug: 'tax-consultant',
+    price: 99,
+    automation_risk: 88,
+    industry_data: {
+      icon: 'Calculator',
+      psychological_title: 'The Tax Code Synthesis Protocol',
+      fear_title: 'Automate Tax Prep & Deduction Discovery Instantly',
+      ad_hook: 'Scan tax filings, find hidden deductions, and draft audit responses in minutes',
+      pain_points: ['Tax code complexity', 'Tax season 80-hour work weeks', 'Manual receipt audit'],
+      industry_tools: ['Drake Tax', 'UltraTax CS', 'Excel', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£800 - £5,000 per filing',
+      onboarding_questions: [
+        { q: 'Client focus?', options: ['Individual High-Net-Worth', 'Corporate/SMB', 'International Tax'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Deduction Discovery Bot', icon: '🧾', description: 'Scan 100 bank statements & extract valid deductions automatically' }
+      ],
+      meta_title: 'AI Survival Guide for Tax Consultants — 2026 Automation',
+      meta_description: 'Automate tax return prep and deduction analysis using AI'
+    }
+  },
+  {
+    name: 'Mortgage Broker',
+    slug: 'mortgage-broker',
+    price: 69,
+    automation_risk: 81,
+    industry_data: {
+      icon: 'Home',
+      psychological_title: 'The Underwriting Speed Engine',
+      fear_title: 'AI Underwriting Bots Are Processing Loans in 60 Seconds',
+      ad_hook: 'Collect documents, qualify borrowers, and find best rates automatically',
+      pain_points: ['Document chase fatigue', 'Lender criteria matching lag', 'Borrower ghosting'],
+      industry_tools: ['Encompass', 'Zapier', 'WhatsApp', 'ChatGPT'],
+      avg_revenue_client: '£1,500 - £6,000 Commission per deal',
+      onboarding_questions: [
+        { q: 'Primary loan type?', options: ['Residential Mortgage', 'Commercial/BTL', 'Refinance'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Document Pre-Qualifier', icon: '📑', description: 'Verify income & bank statements in under 2 minutes' }
+      ],
+      meta_title: 'AI Survival Guide for Mortgage Brokers — 2026 Underwriting',
+      meta_description: 'How top mortgage brokers use AI to close loans 3x faster'
+    }
+  },
+  {
+    name: 'Public Relations Specialist',
+    slug: 'public-relations-specialist',
+    price: 59,
+    automation_risk: 53,
+    industry_data: {
+      icon: 'Megaphone',
+      psychological_title: 'The Crisis & Pitch Engine',
+      fear_title: 'Generate Targeted Journalist Pitches & Press Releases in Seconds',
+      ad_hook: 'Increase media placement rates by 40% with AI-personalized press pitches',
+      pain_points: ['Media outreach burnout', 'Journalist list building', 'Press release drafting'],
+      industry_tools: ['Cision', 'Muck Rack', 'ChatGPT', 'Grammarly'],
+      avg_revenue_client: '£2,000 - £10,000 / month retainer',
+      onboarding_questions: [
+        { q: 'PR focus?', options: ['Tech & B2B', 'Consumer/Lifestyle', 'Crisis Communications'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Journalist Pitch Personalizer', icon: '📰', description: 'Match pitch angle to a journalist\'s recent articles automatically' }
+      ],
+      meta_title: 'AI Survival Guide for PR Specialists — 2026 Media Pitching',
+      meta_description: 'How PR pros use AI to personalize pitches and secure top media'
+    }
+  },
+  {
+    name: 'Interior Designer',
+    slug: 'interior-designer',
+    price: 59,
+    automation_risk: 46,
+    industry_data: {
+      icon: 'Sparkles',
+      psychological_title: 'The Spatial Vision Engine',
+      fear_title: 'Turn Client Mood Boards into Photorealistic 3D Renders Instantly',
+      ad_hook: 'Generate 10 interior design concepts and mood boards in 5 minutes',
+      pain_points: ['Client visualization lag', 'Sourcing furniture delays', '3D CAD rendering time'],
+      industry_tools: ['AutoCAD', 'SketchUp', 'Midjourney', 'LookX AI', 'Pinterest'],
+      avg_revenue_client: '£2,000 - £20,000 Project Fee',
+      onboarding_questions: [
+        { q: 'Design style?', options: ['Luxury Residential', 'Commercial/Office', 'Hospitality'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Generative Interior Render Engine', icon: '🛋️', description: 'Convert room photos into photorealistic renovated concepts' }
+      ],
+      meta_title: 'AI Survival Guide for Interior Designers — 2026 Spatial Design',
+      meta_description: 'How interior designers use AI for instant 3D room rendering'
+    }
+  },
+  {
+    name: 'Audio Engineer',
+    slug: 'audio-engineer',
+    price: 49,
+    automation_risk: 57,
+    industry_data: {
+      icon: 'Mic',
+      psychological_title: 'The Acoustic Mastering Logic',
+      fear_title: 'AI Stem Separation & Automated Mastering Are Changing Sound',
+      ad_hook: 'Speed up mixing, noise restoration, and stem extraction by 80%',
+      pain_points: ['Manual noise cleanup', 'Vocal tuning time', 'Client revision fatigue'],
+      industry_tools: ['Pro Tools', 'Logic Pro', 'iZotope RX', 'LALAL.AI', 'Suno AI'],
+      avg_revenue_client: '£300 - £2,500 Track/Project',
+      onboarding_questions: [
+        { q: 'Primary role?', options: ['Music Mixing/Mastering', 'Podcast/Voiceover', 'Film Sound Design'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Noise & Stem Cleaner', icon: '🎧', description: 'Isolate vocals & remove background hum in 1-click' }
+      ],
+      meta_title: 'AI Survival Guide for Audio Engineers — 2026 Sound Tech',
+      meta_description: 'How audio engineers use AI for rapid mixing and stem separation'
+    }
+  },
+  {
+    name: 'Video Editor',
+    slug: 'video-editor',
+    price: 59,
+    automation_risk: 63,
+    industry_data: {
+      icon: 'Film',
+      psychological_title: 'The Timeline Speed Protocol',
+      fear_title: 'AI Text-Based Editing & Auto-Cut Algorithms Are Here',
+      ad_hook: 'Edit 1-hour interviews in 10 minutes with transcript-driven cutting',
+      pain_points: ['Rough cut assembly time', 'B-roll searching', 'Color grading latency'],
+      industry_tools: ['Premiere Pro', 'DaVinci Resolve', 'Descript', 'Runway AI', 'CapCut'],
+      avg_revenue_client: '£500 - £5,000 Video',
+      onboarding_questions: [
+        { q: 'Video format?', options: ['YouTube Long-Form', 'Commercial/Corporate', 'Social Shorts/Reels'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Transcript Rough Cut Engine', icon: '✂️', description: 'Auto-cut silence, filler words & assemble rough edits from text' }
+      ],
+      meta_title: 'AI Survival Guide for Video Editors — 2026 Editing Speed',
+      meta_description: 'How video editors leverage AI text-based editing to 5x turnarounds'
+    }
+  },
+  {
+    name: 'Business Analyst',
+    slug: 'business-analyst',
+    price: 79,
+    automation_risk: 74,
+    industry_data: {
+      icon: 'PieChart',
+      psychological_title: 'The Requirements & Logic Engine',
+      fear_title: 'Automate Requirements Docs & User Stories Instantly',
+      ad_hook: 'Generate BRDs, user stories, and process flowcharts in seconds with AI',
+      pain_points: ['Requirements gathering delay', 'Manual process mapping', 'Stakeholder alignment'],
+      industry_tools: ['Jira', 'Confluence', 'Lucidchart', 'Python', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£60,000 - £110,000 Salary',
+      onboarding_questions: [
+        { q: 'Industry domain?', options: ['Financial Services', 'Tech/SaaS', 'Retail/E-commerce'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI User Story Generator', icon: '📋', description: 'Convert stakeholder transcripts into Jira user stories automatically' }
+      ],
+      meta_title: 'AI Survival Guide for Business Analysts — 2026 Requirements',
+      meta_description: 'Automate BRD creation and requirements documentation with AI'
+    }
+  },
+  {
+    name: 'SEO Specialist',
+    slug: 'seo-specialist',
+    price: 59,
+    automation_risk: 67,
+    industry_data: {
+      icon: 'TrendingUp',
+      psychological_title: 'The Search Intent & pSEO Engine',
+      fear_title: 'AI Search Overviews Are Changing SEO Strategy',
+      ad_hook: 'Scale programmatic pSEO pages and schema markup to rank #1 on Google & Perplexity',
+      pain_points: ['Keyword research grind', 'Content optimization velocity', 'Google algorithm updates'],
+      industry_tools: ['Ahrefs', 'SEMrush', 'Screaming Frog', 'ChatGPT', 'Search Console'],
+      avg_revenue_client: '£1,000 - £8,000 / month retainer',
+      onboarding_questions: [
+        { q: 'SEO focus?', options: ['Programmatic pSEO', 'Local SEO', 'Enterprise Content'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Programmatic pSEO Forge', icon: '🚀', description: 'Generate 500 high-converting keyword landing pages safely' }
+      ],
+      meta_title: 'AI Survival Guide for SEO Specialists — 2026 Search Growth',
+      meta_description: 'How SEO strategists leverage AI for programmatic pSEO and AIO ranking'
+    }
+  },
+  {
+    name: 'Event Planner',
+    slug: 'event-planner',
+    price: 49,
+    automation_risk: 48,
+    industry_data: {
+      icon: 'Calendar',
+      psychological_title: 'The Event Logistics Engine',
+      fear_title: 'Automate Vendor Sourcing, Run of Show, & RSVPs',
+      ad_hook: 'Plan 500-person corporate events with 70% less administrative hassle',
+      pain_points: ['Vendor communication overload', 'Run-of-show schedule changes', 'RSVP tracking'],
+      industry_tools: ['Cvent', 'Eventbrite', 'Excel', 'ChatGPT', 'Canva'],
+      avg_revenue_client: '£2,000 - £25,000 Planning Fee',
+      onboarding_questions: [
+        { q: 'Event scale?', options: ['Corporate Conferences', 'Weddings/Private', 'Trade Shows'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Run-of-Show Architect', icon: '⏱️', description: 'Generate minute-by-minute event schedules & vendor alerts' }
+      ],
+      meta_title: 'AI Survival Guide for Event Planners — 2026 Logistics',
+      meta_description: 'Automate vendor coordination and event schedules with AI'
+    }
+  },
+  {
+    name: 'Insurance Broker',
+    slug: 'insurance-broker',
+    price: 69,
+    automation_risk: 84,
+    industry_data: {
+      icon: 'Shield',
+      psychological_title: 'The Policy Risk Comparison Engine',
+      fear_title: 'Instant Policy Comparisons Are Replacing Manual Quote Checks',
+      ad_hook: 'Compare 20 carrier policies and generate client proposals in under 2 minutes',
+      pain_points: ['Carrier portal hopping', 'Manual policy comparison', 'Client renewal churn'],
+      industry_tools: ['Applied Epic', 'HawkSoft', 'Excel', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£1,000 - £15,000 Commission per policy',
+      onboarding_questions: [
+        { q: 'Insurance line?', options: ['Commercial Property/Casualty', 'Life & Health', 'Personal Lines'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Policy Coverage Matcher', icon: '📑', description: 'Extract exclusions & coverage limits from PDF carrier quotes' }
+      ],
+      meta_title: 'AI Survival Guide for Insurance Brokers — 2026 Edition',
+      meta_description: 'How insurance brokers use AI to compare policies and close clients faster'
+    }
+  },
+  {
+    name: 'UX Designer',
+    slug: 'ux-designer',
+    price: 69,
+    automation_risk: 52,
+    industry_data: {
+      icon: 'Layout',
+      psychological_title: 'The Wireframe & User Test Engine',
+      fear_title: 'Generative UI & AI Prototype Generators Are Shifting Design',
+      ad_hook: 'Convert user research into Figma wireframes and copy in seconds',
+      pain_points: ['User research synthesis time', 'Figma component management', 'Usability testing lag'],
+      industry_tools: ['Figma', 'Relume AI', 'v0.dev', 'Midjourney', 'Maze'],
+      avg_revenue_client: '£3,000 - £25,000 Design Sprint',
+      onboarding_questions: [
+        { q: 'Product type?', options: ['Mobile Apps', 'SaaS Dashboards', 'E-commerce'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI UX Research Synthesizer', icon: '📱', description: 'Extract key user pain points & wireframe concepts from 20 user interviews' }
+      ],
+      meta_title: 'AI Survival Guide for UX Designers — Generative UI 2026',
+      meta_description: 'How UX designers leverage AI for instant user research synthesis'
+    }
+  },
+  {
+    name: 'Civil Engineer',
+    slug: 'civil-engineer',
+    price: 79,
+    automation_risk: 38,
+    industry_data: {
+      icon: 'HardHat',
+      psychological_title: 'The Infrastructure Logic Protocol',
+      fear_title: 'Automate Structural Calculations & Environmental Compliance',
+      ad_hook: 'Speed up site feasibility studies and permit documentation by 60%',
+      pain_points: ['Permit review lag', 'Environmental assessment paperwork', 'Site inspection reporting'],
+      industry_tools: ['AutoCAD Civil 3D', 'Bentley OpenRoads', 'Excel', 'ChatGPT'],
+      avg_revenue_client: '£65,000 - £120,000 Salary',
+      onboarding_questions: [
+        { q: 'Engineering domain?', options: ['Transportation/Roads', 'Structural/Buildings', 'Water/Environmental'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Permit & Site Study Assistant', icon: '🏗️', description: 'Extract local planning codes & compliance requirements in 30 seconds' }
+      ],
+      meta_title: 'AI Survival Guide for Civil Engineers — 2026 Infrastructure',
+      meta_description: 'Automate site studies and environmental compliance using AI'
+    }
+  },
+  {
+    name: 'Pharmacist',
+    slug: 'pharmacist',
+    price: 89,
+    automation_risk: 51,
+    industry_data: {
+      icon: 'Pill',
+      psychological_title: 'The Clinical Interaction Engine',
+      fear_title: 'Automate Drug Interaction Audits & Patient Counseling',
+      ad_hook: 'Streamline prescription reviews and patient consultations with AI accuracy',
+      pain_points: ['Prescription entry paperwork', 'Drug interaction warnings', 'Insurance prior authorization'],
+      industry_tools: ['PioneerRx', 'Micro Merchant Systems', 'Lexicomp', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£55,000 - £100,000 Salary',
+      onboarding_questions: [
+        { q: 'Pharmacy setting?', options: ['Retail/Community', 'Hospital/Clinical', 'Compounding'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Interaction & Prior Auth Assistant', icon: '💊', description: 'Generate prior authorization letters & patient advisory guides' }
+      ],
+      meta_title: 'AI Survival Guide for Pharmacists — 2026 Clinical Efficiency',
+      meta_description: 'Streamline prescription reviews and prior auths with AI'
+    }
   }
 ]
+
 
