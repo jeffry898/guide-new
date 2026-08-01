@@ -11,70 +11,29 @@ import { ArrowRight, ShieldCheck, Lock, Globe, TrendingUp, Zap, Check, AlertTria
 import Link from 'next/link';
 
 const GuideCover = ({ profession, slugStr }: { profession: Profession, slugStr?: string }) => {
+  const imageSrc = `/images/guides/${profession.slug || slugStr}.jpg`;
+
   return (
-    <div className="relative w-[400px] h-[500px] bg-[#0A0F1E] shadow-[0_50px_100px_rgba(0,0,0,0.8),0_0_1px_rgba(201,168,76,0.3)] border-[2px] border-[#C9A84C] group overflow-hidden">
-      {/* Grid Pattern Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-           style={{ backgroundImage: 'linear-gradient(#C9A84C 1px, transparent 1px), linear-gradient(90deg, #C9A84C 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
-      </div>
+    <div className="relative w-[360px] md:w-[420px] aspect-[3/4] bg-[#060913] shadow-[0_30px_90px_rgba(0,0,0,0.9),0_0_40px_rgba(201,168,76,0.3)] border-[2px] border-[#C9A84C] rounded-xl group overflow-hidden">
+      {/* Actual High-Res Guide Cover Image */}
+      <img 
+        src={imageSrc} 
+        alt={`AI Guide Cover for ${profession.name}`}
+        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+        onError={(e) => {
+          // Fallback if image fails to load
+          (e.target as HTMLElement).style.display = 'none';
+        }}
+      />
 
-      {/* Glossy Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-transparent pointer-events-none" />
+      {/* Frame Gold Corner Accents */}
+      <div className="absolute top-2 left-2 w-6 h-6 border-t-2 border-l-2 border-[#C9A84C] pointer-events-none z-10" />
+      <div className="absolute top-2 right-2 w-6 h-6 border-t-2 border-r-2 border-[#C9A84C] pointer-events-none z-10" />
+      <div className="absolute bottom-2 left-2 w-6 h-6 border-b-2 border-l-2 border-[#C9A84C] pointer-events-none z-10" />
+      <div className="absolute bottom-2 right-2 w-6 h-6 border-b-2 border-r-2 border-[#C9A84C] pointer-events-none z-10" />
 
-      {/* Corner Accents */}
-      <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C9A84C]" />
-      <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#C9A84C]" />
-      <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#C9A84C]" />
-      <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C9A84C]" />
-
-      {/* 2026 Edition Stamp */}
-      <div className="absolute top-8 right-8 border border-[#C9A84C]/40 px-3 py-1 -rotate-12">
-        <span className="text-[10px] font-mono font-black text-[#C9A84C] tracking-[0.2em]">2026 EDITION</span>
-      </div>
-
-      <div className="h-full flex flex-col p-10 relative z-10">
-        {/* Top Header */}
-        <div className="flex justify-between items-start mb-12">
-          <div className="text-[10px] font-mono font-black text-[#C9A84C]/60 uppercase tracking-[0.3em]">
-            CLASSIFIED // GENIUZLAB
-          </div>
-          <div className="w-8 h-[2px] bg-[#C9A84C]/40 mt-1" />
-        </div>
-
-        {/* Center Content */}
-        <div className="flex-grow flex flex-col items-center justify-center text-center">
-          <div className="text-8xl mb-10 group-hover:scale-110 transition-transform duration-500 filter drop-shadow-[0_0_15px_rgba(201,168,76,0.4)]">
-            {profession.icon || (slugStr?.includes('doctor') ? '🩺' : '💼')}
-          </div>
-          
-          <h2 className="text-4xl font-serif font-bold text-[#F8F6F0] mb-4 leading-tight">
-            {profession.name}
-          </h2>
-          
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-[1px] w-8 bg-[#C9A84C]/40" />
-            <span className="text-[11px] font-mono font-black text-[#C9A84C] uppercase tracking-[0.4em]">
-              INTELLIGENCE PROTOCOL
-            </span>
-            <div className="h-[1px] w-8 bg-[#C9A84C]/40" />
-          </div>
-
-          <div className="inline-flex items-center gap-2 bg-red-600 px-4 py-2 rounded-[2px] shadow-[0_0_20px_rgba(220,38,38,0.3)]">
-            <AlertTriangle className="w-4 h-4 text-white fill-white/20" />
-            <span className="text-xs font-mono font-black text-white uppercase tracking-tighter">
-              RISK LEVEL: {profession.automation_risk || 0}% DISPLACEMENT
-            </span>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="mt-auto pt-10 flex flex-col items-center">
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-[#C9A84C]/20 to-transparent mb-6" />
-          <p className="text-[12px] font-serif italic text-[#C9A84C]">
-            GeniuzLab × <span className="font-bold">{profession.name}</span>
-          </p>
-        </div>
-      </div>
+      {/* Subtle Specular Lighting Effect */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.04] to-transparent pointer-events-none" />
     </div>
   );
 };
