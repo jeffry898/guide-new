@@ -1,0 +1,602 @@
+[
+  {
+    "slug": "hair-salon",
+    "name": "Hair Salon Owner AI Survival Guide — 2026 Edition",
+    "price": 4700,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Hair Salon Owners. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/hair-salon",
+    "files": [
+      "images/hair-salon.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "teacher",
+    "name": "Teacher AI Survival Guide — 2026 Edition",
+    "price": 2900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Teachers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/teacher",
+    "files": [
+      "images/teacher.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "photographer",
+    "name": "Photographer AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Photographers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/photographer",
+    "files": [
+      "images/photographer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "freelance-designer",
+    "name": "Freelance Designer AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Freelance Designers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/freelance-designer",
+    "files": [
+      "images/freelance-designer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "restaurant-owner",
+    "name": "Restaurant Owner AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Restaurant Owners. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/restaurant-owner",
+    "files": [
+      "images/restaurant-owner.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "accountant",
+    "name": "Accountant AI Survival Guide — 2026 Edition",
+    "price": 9900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Accountants. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/accountant",
+    "files": [
+      "images/accountant.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "real-estate-agent",
+    "name": "Real Estate Agent AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Real Estate Agents. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/real-estate-agent",
+    "files": [
+      "images/real-estate-agent.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "dentist",
+    "name": "Dentist AI Survival Guide — 2026 Edition",
+    "price": 8900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Dentists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/dentist",
+    "files": [
+      "images/dentist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "personal-trainer",
+    "name": "Personal Trainer AI Survival Guide — 2026 Edition",
+    "price": 2900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Personal Trainers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/personal-trainer",
+    "files": [
+      "images/personal-trainer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "hotel-owner",
+    "name": "Hotel Owner AI Survival Guide — 2026 Edition",
+    "price": 12900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Hotel Owners. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/hotel-owner",
+    "files": [
+      "images/hotel-owner.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "florist",
+    "name": "Florist AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Florists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/florist",
+    "files": [
+      "images/florist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "lawyer",
+    "name": "Lawyer AI Survival Guide — 2026 Edition",
+    "price": 14900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Lawyers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/lawyer",
+    "files": [
+      "images/lawyer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "nurse",
+    "name": "Nurse AI Survival Guide — 2026 Edition",
+    "price": 2900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Nurses. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/nurse",
+    "files": [
+      "images/nurse.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "plumber",
+    "name": "Plumber AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Plumbers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/plumber",
+    "files": [
+      "images/plumber.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "electrician",
+    "name": "Electrician AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Electricians. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/electrician",
+    "files": [
+      "images/electrician.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "marketing-manager",
+    "name": "Marketing Manager AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Marketing Managers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/marketing-manager",
+    "files": [
+      "images/marketing-manager.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "virtual-assistant",
+    "name": "Virtual Assistant AI Survival Guide — 2026 Edition",
+    "price": 2900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Virtual Assistants. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/virtual-assistant",
+    "files": [
+      "images/virtual-assistant.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "copywriter",
+    "name": "Copywriter AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Copywriters. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/copywriter",
+    "files": [
+      "images/copywriter.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "social-media-manager",
+    "name": "Social Media Manager AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Social Media Managers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/social-media-manager",
+    "files": [
+      "images/social-media-manager.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "chef",
+    "name": "Chef AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Chefs. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/chef",
+    "files": [
+      "images/chef.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "financial-analyst",
+    "name": "Financial Analyst AI Survival Guide — 2026 Edition",
+    "price": 8900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Financial Analysts. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/financial-analyst",
+    "files": [
+      "images/financial-analyst.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "software-engineer",
+    "name": "Software Engineer AI Survival Guide — 2026 Edition",
+    "price": 9900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Software Engineers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/software-engineer",
+    "files": [
+      "images/software-engineer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "data-scientist",
+    "name": "Data Scientist AI Survival Guide — 2026 Edition",
+    "price": 9900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Data Scientists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/data-scientist",
+    "files": [
+      "images/data-scientist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "hr-manager",
+    "name": "HR Manager AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for HR Managers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/hr-manager",
+    "files": [
+      "images/hr-manager.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "architect",
+    "name": "Architect AI Survival Guide — 2026 Edition",
+    "price": 8900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Architects. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/architect",
+    "files": [
+      "images/architect.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "graphic-designer",
+    "name": "Graphic Designer AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Graphic Designers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/graphic-designer",
+    "files": [
+      "images/graphic-designer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "executive-assistant",
+    "name": "Executive Assistant AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Executive Assistants. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/executive-assistant",
+    "files": [
+      "images/executive-assistant.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "project-manager",
+    "name": "Project Manager AI Survival Guide — 2026 Edition",
+    "price": 7900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Project Managers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/project-manager",
+    "files": [
+      "images/project-manager.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "paralegal",
+    "name": "Paralegal AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Paralegals. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/paralegal",
+    "files": [
+      "images/paralegal.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "translator",
+    "name": "Translator AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Translators. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/translator",
+    "files": [
+      "images/translator.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "cybersecurity-analyst",
+    "name": "Cybersecurity Analyst AI Survival Guide — 2026 Edition",
+    "price": 9900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Cybersecurity Analysts. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/cybersecurity-analyst",
+    "files": [
+      "images/cybersecurity-analyst.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "content-creator",
+    "name": "Content Creator AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Content Creators. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/content-creator",
+    "files": [
+      "images/content-creator.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "recruiter",
+    "name": "Talent Recruiter AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Talent Recruiters. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/recruiter",
+    "files": [
+      "images/recruiter.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "supply-chain-manager",
+    "name": "Supply Chain Manager AI Survival Guide — 2026 Edition",
+    "price": 7900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Supply Chain Managers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/supply-chain-manager",
+    "files": [
+      "images/supply-chain-manager.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "veterinarian",
+    "name": "Veterinarian AI Survival Guide — 2026 Edition",
+    "price": 8900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Veterinarians. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/veterinarian",
+    "files": [
+      "images/veterinarian.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "physiotherapist",
+    "name": "Physiotherapist AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Physiotherapists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/physiotherapist",
+    "files": [
+      "images/physiotherapist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "fitness-coach",
+    "name": "Fitness Coach AI Survival Guide — 2026 Edition",
+    "price": 3900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Fitness Coachs. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/fitness-coach",
+    "files": [
+      "images/fitness-coach.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "tax-consultant",
+    "name": "Tax Consultant AI Survival Guide — 2026 Edition",
+    "price": 9900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Tax Consultants. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/tax-consultant",
+    "files": [
+      "images/tax-consultant.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "mortgage-broker",
+    "name": "Mortgage Broker AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Mortgage Brokers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/mortgage-broker",
+    "files": [
+      "images/mortgage-broker.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "public-relations-specialist",
+    "name": "Public Relations Specialist AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Public Relations Specialists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/public-relations-specialist",
+    "files": [
+      "images/public-relations-specialist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "interior-designer",
+    "name": "Interior Designer AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Interior Designers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/interior-designer",
+    "files": [
+      "images/interior-designer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "audio-engineer",
+    "name": "Audio Engineer AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Audio Engineers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/audio-engineer",
+    "files": [
+      "images/audio-engineer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "video-editor",
+    "name": "Video Editor AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Video Editors. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/video-editor",
+    "files": [
+      "images/video-editor.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "business-analyst",
+    "name": "Business Analyst AI Survival Guide — 2026 Edition",
+    "price": 7900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Business Analysts. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/business-analyst",
+    "files": [
+      "images/business-analyst.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "seo-specialist",
+    "name": "SEO Specialist AI Survival Guide — 2026 Edition",
+    "price": 5900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for SEO Specialists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/seo-specialist",
+    "files": [
+      "images/seo-specialist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "event-planner",
+    "name": "Event Planner AI Survival Guide — 2026 Edition",
+    "price": 4900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Event Planners. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/event-planner",
+    "files": [
+      "images/event-planner.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "insurance-broker",
+    "name": "Insurance Broker AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Insurance Brokers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/insurance-broker",
+    "files": [
+      "images/insurance-broker.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "ux-designer",
+    "name": "UX Designer AI Survival Guide — 2026 Edition",
+    "price": 6900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for UX Designers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/ux-designer",
+    "files": [
+      "images/ux-designer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "civil-engineer",
+    "name": "Civil Engineer AI Survival Guide — 2026 Edition",
+    "price": 7900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Civil Engineers. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/civil-engineer",
+    "files": [
+      "images/civil-engineer.jpg"
+    ],
+    "tax_category": "digital_goods"
+  },
+  {
+    "slug": "pharmacist",
+    "name": "Pharmacist AI Survival Guide — 2026 Edition",
+    "price": 8900,
+    "currency": "USD",
+    "description": "Enterprise AI execution guide and interactive prompt sandbox for Pharmacists. Reclaim 20+ hours weekly.",
+    "redirect_url": "https://guidr-empire.pages.dev/product/pharmacist",
+    "files": [
+      "images/pharmacist.jpg"
+    ],
+    "tax_category": "digital_goods"
+  }
+]

@@ -1,0 +1,752 @@
+[
+  {
+    "slug": "hair-salon",
+    "title": "[VIP PASS] Hair Salon Owner AI Masterclass & Execution Blueprint",
+    "price": 47,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Hair Salon Owner AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Hair Salon Owner AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Hair Salon Owner AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/hair-salon",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/hair-salon.jpg"
+  },
+  {
+    "slug": "teacher",
+    "title": "[VIP PASS] Teacher AI Masterclass & Execution Blueprint",
+    "price": 29,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Teacher AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Teacher AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Teacher AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/teacher",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/teacher.jpg"
+  },
+  {
+    "slug": "photographer",
+    "title": "[VIP PASS] Photographer AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Photographer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Photographer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Photographer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/photographer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/photographer.jpg"
+  },
+  {
+    "slug": "freelance-designer",
+    "title": "[VIP PASS] Freelance Designer AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Freelance Designer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Freelance Designer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Freelance Designer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/freelance-designer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/freelance-designer.jpg"
+  },
+  {
+    "slug": "restaurant-owner",
+    "title": "[VIP PASS] Restaurant Owner AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Restaurant Owner AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Restaurant Owner AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Restaurant Owner AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/restaurant-owner",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/restaurant-owner.jpg"
+  },
+  {
+    "slug": "accountant",
+    "title": "[VIP PASS] Accountant AI Masterclass & Execution Blueprint",
+    "price": 99,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Accountant AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Accountant AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Accountant AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/accountant",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/accountant.jpg"
+  },
+  {
+    "slug": "real-estate-agent",
+    "title": "[VIP PASS] Real Estate Agent AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Real Estate Agent AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Real Estate Agent AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Real Estate Agent AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/real-estate-agent",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/real-estate-agent.jpg"
+  },
+  {
+    "slug": "dentist",
+    "title": "[VIP PASS] Dentist AI Masterclass & Execution Blueprint",
+    "price": 89,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Dentist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Dentist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Dentist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/dentist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/dentist.jpg"
+  },
+  {
+    "slug": "personal-trainer",
+    "title": "[VIP PASS] Personal Trainer AI Masterclass & Execution Blueprint",
+    "price": 29,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Personal Trainer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Personal Trainer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Personal Trainer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/personal-trainer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/personal-trainer.jpg"
+  },
+  {
+    "slug": "hotel-owner",
+    "title": "[VIP PASS] Hotel Owner AI Masterclass & Execution Blueprint",
+    "price": 129,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Hotel Owner AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Hotel Owner AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Hotel Owner AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/hotel-owner",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/hotel-owner.jpg"
+  },
+  {
+    "slug": "florist",
+    "title": "[VIP PASS] Florist AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Florist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Florist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Florist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/florist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/florist.jpg"
+  },
+  {
+    "slug": "lawyer",
+    "title": "[VIP PASS] Lawyer AI Masterclass & Execution Blueprint",
+    "price": 149,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Lawyer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Lawyer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Lawyer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/lawyer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/lawyer.jpg"
+  },
+  {
+    "slug": "nurse",
+    "title": "[VIP PASS] Nurse AI Masterclass & Execution Blueprint",
+    "price": 29,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Nurse AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Nurse AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Nurse AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/nurse",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/nurse.jpg"
+  },
+  {
+    "slug": "plumber",
+    "title": "[VIP PASS] Plumber AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Plumber AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Plumber AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Plumber AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/plumber",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/plumber.jpg"
+  },
+  {
+    "slug": "electrician",
+    "title": "[VIP PASS] Electrician AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Electrician AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Electrician AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Electrician AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/electrician",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/electrician.jpg"
+  },
+  {
+    "slug": "marketing-manager",
+    "title": "[VIP PASS] Marketing Manager AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Marketing Manager AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Marketing Manager AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Marketing Manager AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/marketing-manager",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/marketing-manager.jpg"
+  },
+  {
+    "slug": "virtual-assistant",
+    "title": "[VIP PASS] Virtual Assistant AI Masterclass & Execution Blueprint",
+    "price": 29,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Virtual Assistant AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Virtual Assistant AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Virtual Assistant AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/virtual-assistant",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/virtual-assistant.jpg"
+  },
+  {
+    "slug": "copywriter",
+    "title": "[VIP PASS] Copywriter AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Copywriter AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Copywriter AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Copywriter AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/copywriter",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/copywriter.jpg"
+  },
+  {
+    "slug": "social-media-manager",
+    "title": "[VIP PASS] Social Media Manager AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Social Media Manager AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Social Media Manager AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Social Media Manager AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/social-media-manager",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/social-media-manager.jpg"
+  },
+  {
+    "slug": "chef",
+    "title": "[VIP PASS] Chef AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Chef AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Chef AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Chef AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/chef",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/chef.jpg"
+  },
+  {
+    "slug": "financial-analyst",
+    "title": "[VIP PASS] Financial Analyst AI Masterclass & Execution Blueprint",
+    "price": 89,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Financial Analyst AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Financial Analyst AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Financial Analyst AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/financial-analyst",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/financial-analyst.jpg"
+  },
+  {
+    "slug": "software-engineer",
+    "title": "[VIP PASS] Software Engineer AI Masterclass & Execution Blueprint",
+    "price": 99,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Software Engineer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Software Engineer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Software Engineer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/software-engineer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/software-engineer.jpg"
+  },
+  {
+    "slug": "data-scientist",
+    "title": "[VIP PASS] Data Scientist AI Masterclass & Execution Blueprint",
+    "price": 99,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Data Scientist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Data Scientist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Data Scientist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/data-scientist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/data-scientist.jpg"
+  },
+  {
+    "slug": "hr-manager",
+    "title": "[VIP PASS] HR Manager AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 HR Manager AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the HR Manager AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete HR Manager AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/hr-manager",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/hr-manager.jpg"
+  },
+  {
+    "slug": "architect",
+    "title": "[VIP PASS] Architect AI Masterclass & Execution Blueprint",
+    "price": 89,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Architect AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Architect AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Architect AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/architect",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/architect.jpg"
+  },
+  {
+    "slug": "graphic-designer",
+    "title": "[VIP PASS] Graphic Designer AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Graphic Designer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Graphic Designer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Graphic Designer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/graphic-designer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/graphic-designer.jpg"
+  },
+  {
+    "slug": "executive-assistant",
+    "title": "[VIP PASS] Executive Assistant AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Executive Assistant AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Executive Assistant AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Executive Assistant AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/executive-assistant",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/executive-assistant.jpg"
+  },
+  {
+    "slug": "project-manager",
+    "title": "[VIP PASS] Project Manager AI Masterclass & Execution Blueprint",
+    "price": 79,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Project Manager AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Project Manager AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Project Manager AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/project-manager",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/project-manager.jpg"
+  },
+  {
+    "slug": "paralegal",
+    "title": "[VIP PASS] Paralegal AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Paralegal AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Paralegal AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Paralegal AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/paralegal",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/paralegal.jpg"
+  },
+  {
+    "slug": "translator",
+    "title": "[VIP PASS] Translator AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Translator AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Translator AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Translator AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/translator",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/translator.jpg"
+  },
+  {
+    "slug": "cybersecurity-analyst",
+    "title": "[VIP PASS] Cybersecurity Analyst AI Masterclass & Execution Blueprint",
+    "price": 99,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Cybersecurity Analyst AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Cybersecurity Analyst AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Cybersecurity Analyst AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/cybersecurity-analyst",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/cybersecurity-analyst.jpg"
+  },
+  {
+    "slug": "content-creator",
+    "title": "[VIP PASS] Content Creator AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Content Creator AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Content Creator AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Content Creator AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/content-creator",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/content-creator.jpg"
+  },
+  {
+    "slug": "recruiter",
+    "title": "[VIP PASS] Talent Recruiter AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Talent Recruiter AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Talent Recruiter AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Talent Recruiter AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/recruiter",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/recruiter.jpg"
+  },
+  {
+    "slug": "supply-chain-manager",
+    "title": "[VIP PASS] Supply Chain Manager AI Masterclass & Execution Blueprint",
+    "price": 79,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Supply Chain Manager AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Supply Chain Manager AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Supply Chain Manager AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/supply-chain-manager",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/supply-chain-manager.jpg"
+  },
+  {
+    "slug": "veterinarian",
+    "title": "[VIP PASS] Veterinarian AI Masterclass & Execution Blueprint",
+    "price": 89,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Veterinarian AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Veterinarian AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Veterinarian AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/veterinarian",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/veterinarian.jpg"
+  },
+  {
+    "slug": "physiotherapist",
+    "title": "[VIP PASS] Physiotherapist AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Physiotherapist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Physiotherapist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Physiotherapist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/physiotherapist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/physiotherapist.jpg"
+  },
+  {
+    "slug": "fitness-coach",
+    "title": "[VIP PASS] Fitness Coach AI Masterclass & Execution Blueprint",
+    "price": 39,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Fitness Coach AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Fitness Coach AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Fitness Coach AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/fitness-coach",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/fitness-coach.jpg"
+  },
+  {
+    "slug": "tax-consultant",
+    "title": "[VIP PASS] Tax Consultant AI Masterclass & Execution Blueprint",
+    "price": 99,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Tax Consultant AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Tax Consultant AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Tax Consultant AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/tax-consultant",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/tax-consultant.jpg"
+  },
+  {
+    "slug": "mortgage-broker",
+    "title": "[VIP PASS] Mortgage Broker AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Mortgage Broker AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Mortgage Broker AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Mortgage Broker AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/mortgage-broker",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/mortgage-broker.jpg"
+  },
+  {
+    "slug": "public-relations-specialist",
+    "title": "[VIP PASS] Public Relations Specialist AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Public Relations Specialist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Public Relations Specialist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Public Relations Specialist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/public-relations-specialist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/public-relations-specialist.jpg"
+  },
+  {
+    "slug": "interior-designer",
+    "title": "[VIP PASS] Interior Designer AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Interior Designer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Interior Designer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Interior Designer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/interior-designer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/interior-designer.jpg"
+  },
+  {
+    "slug": "audio-engineer",
+    "title": "[VIP PASS] Audio Engineer AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Audio Engineer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Audio Engineer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Audio Engineer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/audio-engineer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/audio-engineer.jpg"
+  },
+  {
+    "slug": "video-editor",
+    "title": "[VIP PASS] Video Editor AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Video Editor AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Video Editor AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Video Editor AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/video-editor",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/video-editor.jpg"
+  },
+  {
+    "slug": "business-analyst",
+    "title": "[VIP PASS] Business Analyst AI Masterclass & Execution Blueprint",
+    "price": 79,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Business Analyst AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Business Analyst AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Business Analyst AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/business-analyst",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/business-analyst.jpg"
+  },
+  {
+    "slug": "seo-specialist",
+    "title": "[VIP PASS] SEO Specialist AI Masterclass & Execution Blueprint",
+    "price": 59,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 SEO Specialist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the SEO Specialist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete SEO Specialist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/seo-specialist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/seo-specialist.jpg"
+  },
+  {
+    "slug": "event-planner",
+    "title": "[VIP PASS] Event Planner AI Masterclass & Execution Blueprint",
+    "price": 49,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Event Planner AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Event Planner AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Event Planner AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/event-planner",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/event-planner.jpg"
+  },
+  {
+    "slug": "insurance-broker",
+    "title": "[VIP PASS] Insurance Broker AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Insurance Broker AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Insurance Broker AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Insurance Broker AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/insurance-broker",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/insurance-broker.jpg"
+  },
+  {
+    "slug": "ux-designer",
+    "title": "[VIP PASS] UX Designer AI Masterclass & Execution Blueprint",
+    "price": 69,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 UX Designer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the UX Designer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete UX Designer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/ux-designer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/ux-designer.jpg"
+  },
+  {
+    "slug": "civil-engineer",
+    "title": "[VIP PASS] Civil Engineer AI Masterclass & Execution Blueprint",
+    "price": 79,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Civil Engineer AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Civil Engineer AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Civil Engineer AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/civil-engineer",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/civil-engineer.jpg"
+  },
+  {
+    "slug": "pharmacist",
+    "title": "[VIP PASS] Pharmacist AI Masterclass & Execution Blueprint",
+    "price": 89,
+    "billing_type": "one_time",
+    "short_description": "VIP Access Pass to the 2026 Pharmacist AI System. Includes live prompt sandbox & 30-day roadmap.",
+    "full_description": "Welcome to the Pharmacist AI Execution Vault!\n\nIncluded in your Whop Digital Access Pass:\n1. Complete Pharmacist AI Protocol (Interactive App + PDF Download)\n2. 5 Tested Master Prompts for ChatGPT & Claude 3.5 Sonnet\n3. Step-by-step SOPs to automate admin, proposals, and client delivery\n4. Direct WhatsApp Access for GeniuzLab Done-For-You Agency Upgrades\n\nClaim your digital access pass now and sync your workflow instantly.\nLive App Link: https://guidr-empire.pages.dev/product/pharmacist",
+    "features": [
+      "Live Interactive Prompt Sandbox",
+      "30-Day Action Roadmap",
+      "PDF Executive Download",
+      "DFY Support"
+    ],
+    "cover_image": "images/pharmacist.jpg"
+  }
+]
