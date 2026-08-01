@@ -3,9 +3,10 @@
 import { motion } from 'motion/react';
 import Navbar from '@/components/Navbar';
 import ProfessionCard from '@/components/ProfessionCard';
+import LeadCaptureModal from '@/components/LeadCaptureModal';
 import { Profession } from '@/lib/constants';
 import { getProfessions } from '@/lib/professions-api';
-import { ShieldCheck, Zap, TrendingUp, ArrowRight, ShieldAlert, Loader2, Calculator, Sparkles, Award, Lock, CheckCircle2, ChevronDown, Layers } from 'lucide-react';
+import { ShieldCheck, Zap, TrendingUp, ArrowRight, ShieldAlert, Loader2, Calculator, Sparkles, Award, Lock, CheckCircle2, ChevronDown, Layers, Search, Grid } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -13,6 +14,8 @@ export default function Home() {
   const [professions, setProfessions] = useState<Profession[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   // Interactive ROI Calculator State
   const [hourlyRate, setHourlyRate] = useState<number>(45);
@@ -38,17 +41,31 @@ export default function Home() {
   const categories = ['ALL', 'HIGH RISK (60%+)', 'CREATIVE & TECH', 'MEDICAL & LEGAL', 'SERVICES & RETAIL'];
 
   const filteredProfessions = professions.filter((p) => {
+    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          p.slug.toLowerCase().includes(searchQuery.toLowerCase());
+    if (!matchesSearch) return false;
+
     if (selectedCategory === 'HIGH RISK (60%+)') return (p.automation_risk || 0) >= 60;
-    if (selectedCategory === 'CREATIVE & TECH') return ['freelance-designer', 'copywriter', 'social-media-manager', 'photographer', 'marketing-manager'].includes(p.slug);
-    if (selectedCategory === 'MEDICAL & LEGAL') return ['dentist', 'nurse', 'lawyer', 'accountant'].includes(p.slug);
-    if (selectedCategory === 'SERVICES & RETAIL') return ['hair-salon', 'restaurant-owner', 'hotel-owner', 'florist', 'plumber', 'electrician', 'chef', 'real-estate-agent', 'personal-trainer', 'virtual-assistant'].includes(p.slug);
+    if (selectedCategory === 'CREATIVE & TECH') return ['freelance-designer', 'copywriter', 'social-media-manager', 'photographer', 'marketing-manager', 'graphic-designer', 'software-engineer', 'data-scientist'].includes(p.slug);
+    if (selectedCategory === 'MEDICAL & LEGAL') return ['dentist', 'nurse', 'lawyer', 'accountant', 'paralegal', 'financial-analyst'].includes(p.slug);
+    if (selectedCategory === 'SERVICES & RETAIL') return ['hair-salon', 'restaurant-owner', 'hotel-owner', 'florist', 'plumber', 'electrician', 'chef', 'real-estate-agent', 'personal-trainer', 'virtual-assistant', 'hr-manager', 'executive-assistant'].includes(p.slug);
     return true;
   });
+
+  // Limit homepage view to top 12 for speed optimization
+  const displayedProfessions = searchQuery ? filteredProfessions : filteredProfessions.slice(0, 12);
 
   return (
     <div className="flex flex-col min-h-screen bg-[#060A14] text-[#F8F6F0] selection:bg-[#C9A84C] selection:text-[#060A14]">
       <Navbar />
       
+      {/* Lead Capture Exit-Intent / Button Modal */}
+      <LeadCaptureModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        professions={professions} 
+      />
+
       <main className="flex-grow pt-24">
         {/* Hero Section */}
         <section className="relative min-h-[92vh] flex flex-col items-center justify-center overflow-hidden px-6 py-20">
@@ -77,7 +94,7 @@ export default function Home() {
               <div className="px-5 py-2 bg-[#0A0F1E] border border-[#C9A84C]/40 rounded-full flex items-center gap-3 shadow-[0_0_25px_rgba(201,168,76,0.15)]">
                 <span className="w-2 h-2 rounded-full bg-[#C9A84C] animate-ping" />
                 <span className="text-xs font-mono font-bold text-[#C9A84C] uppercase tracking-[0.25em]">
-                  GENIUZLAB INTELLIGENCE ENGINE // USA · UK · EU EDITION
+                  GENIUZLAB INTELLIGENCE ENGINE // 50+ SECTORS ACTIVE
                 </span>
               </div>
             </motion.div>
@@ -99,24 +116,21 @@ export default function Home() {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
-                <Link href="/risk-report" className="w-full sm:w-auto">
-                  <motion.button 
-                    whileHover={{ scale: 1.04, boxShadow: "0 0 40px rgba(201,168,76,0.4)" }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] px-10 py-5 rounded-lg text-lg font-black flex items-center justify-center gap-3 uppercase tracking-widest shadow-2xl transition-all cursor-pointer"
-                  >
-                    <span>Get Free Risk Report</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.button>
-                </Link>
-                
-                <Link href="#explore" className="w-full sm:w-auto">
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] px-10 py-5 rounded-lg text-lg font-black flex items-center justify-center gap-3 uppercase tracking-widest shadow-2xl transition-all cursor-pointer hover:scale-[1.03]"
+                >
+                  <span>Get Free Risk Report</span>
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+
+                <Link href="/directory" className="w-full sm:w-auto">
                   <motion.button 
                     whileHover={{ scale: 1.04, backgroundColor: "rgba(201,168,76,0.1)" }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto border border-[#C9A84C]/40 text-[#F8F6F0] hover:border-[#C9A84C] px-10 py-5 rounded-lg text-lg font-bold uppercase tracking-widest transition-all"
+                    className="w-full sm:w-auto border border-[#C9A84C]/40 text-[#F8F6F0] hover:border-[#C9A84C] px-10 py-5 rounded-lg text-lg font-bold uppercase tracking-widest transition-all cursor-pointer"
                   >
-                    Explore 20 Protocols
+                    Browse All 50+ Directory
                   </motion.button>
                 </Link>
               </div>
@@ -139,7 +153,7 @@ export default function Home() {
                     </span>
                   </div>
                   <span className="text-[10px] font-mono text-[#C9A84C] font-bold tracking-widest uppercase">
-                    20 SECTORS ACTIVE · 99.9% ACCURACY
+                    50 SECTORS ACTIVE · 99.9% ACCURACY
                   </span>
                 </div>
               </div>
@@ -263,11 +277,12 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link href="/risk-report" className="block pt-2">
-                  <button className="w-full bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] py-4 rounded-lg font-mono font-black text-sm uppercase tracking-widest shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
-                    Claim Your Custom Protocol <ArrowRight className="w-4 h-4" />
-                  </button>
-                </Link>
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="w-full bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] py-4 rounded-lg font-mono font-black text-sm uppercase tracking-widest shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer hover:scale-[1.02]"
+                >
+                  Claim Your Custom Protocol <ArrowRight className="w-4 h-4" />
+                </button>
               </div>
             </div>
           </div>
@@ -277,7 +292,7 @@ export default function Home() {
         <section id="explore" className="py-28 px-6 max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-widest">
-              <Award className="w-3.5 h-3.5" /> 2026 SURVIVAL PROTOCOL CATALOG
+              <Award className="w-3.5 h-3.5" /> SURVIVAL PROTOCOL CATALOG
             </div>
             
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#F8F6F0]">
@@ -288,8 +303,22 @@ export default function Home() {
               Each protocol contains 8K visual guides, step-by-step 4-week roadmaps, ChatGPT/Claude prompt libraries, and free tool stacks tailored to your exact industry.
             </p>
 
+            {/* Instant Search Bar inside Catalog */}
+            <div className="relative max-w-lg mx-auto pt-2">
+              <div className="relative flex items-center">
+                <Search className="absolute left-4 w-4 h-4 text-[#C9A84C]" />
+                <input 
+                  type="text"
+                  placeholder="Filter 50+ professions (e.g. Accountant, Software Engineer)..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full bg-[#0A0F1E] border border-[#C9A84C]/40 rounded-xl py-3 pl-11 pr-4 text-xs font-mono text-[#F8F6F0] placeholder:text-gray-500 focus:outline-none focus:border-[#C9A84C]"
+                />
+              </div>
+            </div>
+
             {/* Category Filter Pills */}
-            <div className="flex flex-wrap justify-center gap-2 pt-6">
+            <div className="flex flex-wrap justify-center gap-2 pt-4">
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -312,10 +341,23 @@ export default function Home() {
               <span className="text-xs font-mono text-[#C9A84C] uppercase tracking-widest">Loading Intelligence Database...</span>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {filteredProfessions.map((prof) => (
-                <ProfessionCard key={prof.id || prof.slug} profession={prof} />
-              ))}
+            <div className="space-y-12">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {displayedProfessions.map((prof) => (
+                  <ProfessionCard key={prof.id || prof.slug} profession={prof} />
+                ))}
+              </div>
+
+              {/* View All Directory Button */}
+              <div className="text-center pt-6">
+                <Link href="/directory">
+                  <button className="px-10 py-5 bg-[#0A0F1E] border-2 border-[#C9A84C] text-[#C9A84C] hover:bg-[#C9A84C] hover:text-[#060A14] rounded-xl font-mono font-black text-xs uppercase tracking-widest transition-all shadow-2xl flex items-center justify-center gap-3 mx-auto cursor-pointer">
+                    <Grid className="w-4 h-4" />
+                    <span>View All 50+ Professions Directory</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </Link>
+              </div>
             </div>
           )}
         </section>
@@ -399,6 +441,7 @@ export default function Home() {
 
           <div className="flex flex-wrap justify-center gap-6 text-gray-400">
             <Link href="/risk-report" className="hover:text-[#C9A84C] transition-colors">Free Risk Assessment</Link>
+            <Link href="/directory" className="hover:text-[#C9A84C] transition-colors">50+ Directory</Link>
             <Link href="/privacy" className="hover:text-[#C9A84C] transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-[#C9A84C] transition-colors">Terms of Service</Link>
             <Link href="/refund" className="hover:text-[#C9A84C] transition-colors">30-Day Refund Policy</Link>

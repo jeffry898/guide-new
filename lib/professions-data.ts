@@ -519,8 +519,239 @@ export const PROFESSIONS = [
         { name: 'Dynamic Food Costing', icon: '🏷️', description: 'Real-time updates to your menu margins as supplier prices change' },
         { name: 'Standard Operating Bot', icon: '🤖', description: 'AI generates visual training manuals for staff in seconds' }
       ],
-      meta_title: 'AI Survival Guide for Chefs — Engineering The Kitchen',
-      meta_description: 'How modern chefs are using AI to optimize menus and reduce food costs'
+    }
+  },
+  {
+    name: 'Financial Analyst',
+    slug: 'financial-analyst',
+    price: 89,
+    automation_risk: 82,
+    industry_data: {
+      icon: 'BarChart3',
+      psychological_title: 'The Algorithmic Capital Protocol',
+      fear_title: 'Excel Models Are Being Automated 10x Faster by AI',
+      ad_hook: 'Automate financial modeling, forecasting, and earnings reports in seconds',
+      pain_points: ['Manual spreadsheet modeling', 'Data extraction lag', 'Quarterly report crunch', 'Regulatory updates'],
+      industry_tools: ['Bloomberg Terminal', 'Excel', 'Python', 'FactSet', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£75,000 - £150,000 Salary / Fee',
+      onboarding_questions: [
+        { q: 'Primary focus?', options: ['Corporate Finance', 'Investment Banking', 'Asset Management'] },
+        { q: 'Hours spent on Excel weekly?', type: 'text', placeholder: 'e.g. 25 hours' }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Financial Model Generator', icon: '📊', description: 'Build 3-statement financial models automatically' },
+        { name: 'Earnings Call Synthesizer', icon: '🎙️', description: 'Extract sentiment & key KPIs from 100-page earnings transcripts' }
+      ],
+      meta_title: 'AI Survival Guide for Financial Analysts — 2026 Edition',
+      meta_description: 'How financial analysts are using AI to build models 10x faster'
+    }
+  },
+  {
+    name: 'Software Engineer',
+    slug: 'software-engineer',
+    price: 99,
+    automation_risk: 65,
+    industry_data: {
+      icon: 'Code',
+      psychological_title: 'The AI System Architect Blueprint',
+      fear_title: 'Code Generation Is Free: Modern Engineers Must Architect Systems',
+      ad_hook: 'Shift from syntax writer to AI system orchestrator and 10x your output',
+      pain_points: ['Legacy code refactoring', 'Boilerplate overhead', 'Bug hunting', 'System design pressure'],
+      industry_tools: ['GitHub Copilot', 'Cursor', 'Claude 3.5 Sonnet', 'Docker', 'PostgreSQL'],
+      avg_revenue_client: '£80,000 - £180,000 Salary',
+      onboarding_questions: [
+        { q: 'Primary stack?', options: ['Fullstack TS/React', 'Python/Backend', 'DevOps/Cloud'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Autonomous Coding Pipeline', icon: '⚡', description: 'Deploy self-testing AI coding agents' }
+      ],
+      meta_title: 'AI Survival Guide for Software Engineers — 2026 Architecture',
+      meta_description: 'How software developers leverage AI agents for system design'
+    }
+  },
+  {
+    name: 'Data Scientist',
+    slug: 'data-scientist',
+    price: 99,
+    automation_risk: 72,
+    industry_data: {
+      icon: 'Database',
+      psychological_title: 'The Neural Pipeline Engine',
+      fear_title: 'AutoML Is Replacing Manual Model Tuning',
+      ad_hook: 'Build production ML pipelines and LLM apps in days instead of months',
+      pain_points: ['Data cleaning bottleneck', 'Model deployment lag', 'Stakeholder reporting'],
+      industry_tools: ['Python', 'PyTorch', 'Databricks', 'Snowflake', 'LangChain'],
+      avg_revenue_client: '£90,000 - £160,000 Salary',
+      onboarding_questions: [
+        { q: 'Primary domain?', options: ['LLMs & RAG', 'Computer Vision', 'Predictive Analytics'] }
+      ],
+      geniuzlab_services: [
+        { name: 'RAG Pipeline Builder', icon: '🧠', description: 'Deploy enterprise search & vector retrieval systems' }
+      ],
+      meta_title: 'AI Survival Guide for Data Scientists — 2026 Pipeline',
+      meta_description: 'Transform from model trainer to enterprise AI system architect'
+    }
+  },
+  {
+    name: 'HR Manager',
+    slug: 'hr-manager',
+    price: 59,
+    automation_risk: 58,
+    industry_data: {
+      icon: 'Users',
+      psychological_title: 'The People Intelligence Engine',
+      fear_title: 'Automate Onboarding, Compliance, & Screenings 24/7',
+      ad_hook: 'Reduce hiring overhead by 60% with AI applicant screening',
+      pain_points: ['Resume screening overload', 'Policy documentation', 'Employee onboarding friction'],
+      industry_tools: ['Workday', 'BambooHR', 'Greenhouse', 'Notion AI', 'ChatGPT'],
+      avg_revenue_client: '£55,000 - £95,000 Salary',
+      onboarding_questions: [
+        { q: 'Company size?', options: ['1-50', '51-200', '200+'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Resume Ranker', icon: '📄', description: 'Screen 500 applicants against exact role criteria in 60 seconds' }
+      ],
+      meta_title: 'AI Survival Guide for HR Managers — 2026 Hiring Automation',
+      meta_description: 'Automate talent acquisition and HR compliance using modern AI'
+    }
+  },
+  {
+    name: 'Architect',
+    slug: 'architect',
+    price: 89,
+    automation_risk: 42,
+    industry_data: {
+      icon: 'Compass',
+      psychological_title: 'The Generative Structural Logic',
+      fear_title: 'Generative BIM & AI Rendering Are Reshaping Architecture',
+      ad_hook: 'Turn sketches into 8K photorealistic renders and CAD models in seconds',
+      pain_points: ['Rendering wait times', 'Client revision cycles', 'Zoning & building code compliance'],
+      industry_tools: ['Revit', 'Rhino', 'Midjourney', 'LookX AI', 'AutoCAD'],
+      avg_revenue_client: '£5,000 - £50,000 Project Fee',
+      onboarding_questions: [
+        { q: 'Focus area?', options: ['Residential', 'Commercial', 'Urban Planning'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Generative Render Engine', icon: '🏛️', description: 'Convert floor plans into 8K 3D renders instantly' }
+      ],
+      meta_title: 'AI Survival Guide for Architects — Generative Design 2026',
+      meta_description: 'How top architects use AI for rapid conceptualization and rendering'
+    }
+  },
+  {
+    name: 'Graphic Designer',
+    slug: 'graphic-designer',
+    price: 49,
+    automation_risk: 68,
+    industry_data: {
+      icon: 'Palette',
+      psychological_title: 'The Creative Synthesis Engine',
+      fear_title: 'Move Beyond Canvas Design: Become a Creative Director',
+      ad_hook: 'Scale from single assets to 100-page brand systems using AI vector generation',
+      pain_points: ['Client micro-revisions', 'Asset resizing fatigue', 'Stock photo costs'],
+      industry_tools: ['Photoshop', 'Figma', 'Midjourney', 'Kling AI', 'Illustrator'],
+      avg_revenue_client: '£1,000 - £10,000 Brand Fee',
+      onboarding_questions: [
+        { q: 'Design focus?', options: ['Brand Identity', 'UI/UX', 'Marketing Assets'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Brand System Engine', icon: '🎨', description: 'Generate multi-platform ad creative variations in 1-click' }
+      ],
+      meta_title: 'AI Survival Guide for Graphic Designers — 2026 Edition',
+      meta_description: 'How graphic designers leverage generative AI to 5x client output'
+    }
+  },
+  {
+    name: 'Executive Assistant',
+    slug: 'executive-assistant',
+    price: 39,
+    automation_risk: 78,
+    industry_data: {
+      icon: 'Briefcase',
+      psychological_title: 'The Executive Command Protocol',
+      fear_title: 'AI Agents Are Taking Over Calendar & Travel Management',
+      ad_hook: 'Become an indispensable Chief of Staff by managing AI executive bots',
+      pain_points: ['Inbox overflow', 'Complex scheduling conflicts', 'Meeting transcript synthesis'],
+      industry_tools: ['Google Calendar', 'Superhuman', 'Otter.ai', 'Notion', 'ChatGPT'],
+      avg_revenue_client: '£40,000 - £80,000 Salary',
+      onboarding_questions: [
+        { q: 'Executive count supported?', options: ['1 C-Suite', '2-3 Executives', 'Team'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Autonomous Inbox Triage', icon: '📥', description: 'Draft 90% of email replies using executive tone' }
+      ],
+      meta_title: 'AI Survival Guide for Executive Assistants — 2026 Command',
+      meta_description: 'Transform from scheduling assistant to AI-powered Chief of Staff'
+    }
+  },
+  {
+    name: 'Project Manager',
+    slug: 'project-manager',
+    price: 79,
+    automation_risk: 61,
+    industry_data: {
+      icon: 'Kanban',
+      psychological_title: 'The Predictive Execution Engine',
+      fear_title: 'Automate Status Reports & Risk Tracking Instantly',
+      ad_hook: 'Eliminate 80% of manual Jira/Asana updates with AI project agents',
+      pain_points: ['Status meeting fatigue', 'Scope creep detection', 'Resource allocation lag'],
+      industry_tools: ['Jira', 'Asana', 'Monday.com', 'Notion AI', 'Slack AI'],
+      avg_revenue_client: '£65,000 - £120,000 Salary',
+      onboarding_questions: [
+        { q: 'Methodology?', options: ['Agile/Scrum', 'Waterfall', 'Hybrid'] }
+      ],
+      geniuzlab_services: [
+        { name: 'AI Status Report Generator', icon: '📝', description: 'Auto-synthesize weekly progress from Slack & commits' }
+      ],
+      meta_title: 'AI Survival Guide for Project Managers — 2026 Blueprint',
+      meta_description: 'How project managers use predictive AI to eliminate status meetings'
+    }
+  },
+  {
+    name: 'Paralegal',
+    slug: 'paralegal',
+    price: 69,
+    automation_risk: 89,
+    industry_data: {
+      icon: 'Scale',
+      psychological_title: 'The Case Research Engine',
+      fear_title: 'Document Review & Contract Discovery Are 90% Automated',
+      ad_hook: 'Review 500-page case files and extract precedent in under 3 minutes',
+      pain_points: ['Contract discovery grind', 'Citation formatting', 'Filing deadline stress'],
+      industry_tools: ['LexisNexis', 'Westlaw', 'Harvey AI', 'Casetext', 'Microsoft Word'],
+      avg_revenue_client: '£45,000 - £75,000 Salary',
+      onboarding_questions: [
+        { q: 'Legal practice area?', options: ['Corporate', 'Litigation', 'Real Estate'] }
+      ],
+      geniuzlab_services: [
+        { name: 'Contract Redline Bot', icon: '📜', description: 'Flag risky clauses & draft revisions in 30 seconds' }
+      ],
+      meta_title: 'AI Survival Guide for Paralegals — Legal Automation 2026',
+      meta_description: 'Discover how top paralegals use AI for instant legal research'
+    }
+  },
+  {
+    name: 'Translator',
+    slug: 'translator',
+    price: 39,
+    automation_risk: 91,
+    industry_data: {
+      icon: 'Globe',
+      psychological_title: 'The Cultural Localization Engine',
+      fear_title: 'Raw Translation Is Free: Pivot to Cultural Localization & AI Supervision',
+      ad_hook: 'Loculate 50,000 words a day with human nuance and AI speed',
+      pain_points: ['Price per word collapse', 'MTPE fatigue', 'Tight turnarounds'],
+      industry_tools: ['DeepL', 'Trados', 'MemSource', 'Claude 3.5', 'ChatGPT Enterprise'],
+      avg_revenue_client: '£30,000 - £70,000 Income',
+      onboarding_questions: [
+        { q: 'Language pairs?', type: 'text', placeholder: 'e.g. EN -> DE, ES, FR' }
+      ],
+      geniuzlab_services: [
+        { name: 'Cultural Nuance Tuner', icon: '🌐', description: 'Adapt AI translations for exact regional idioms' }
+      ],
+      meta_title: 'AI Survival Guide for Translators — 2026 Localization Engine',
+      meta_description: 'How translators pivot to high-paid AI localization specialists'
     }
   }
 ]
+
