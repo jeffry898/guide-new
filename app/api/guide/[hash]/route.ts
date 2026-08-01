@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+﻿import { createClient } from '@supabase/supabase-js';
 
 // Access global guideCache from the same process
 const getGuideCache = () => {
@@ -9,6 +9,7 @@ const getGuideCache = () => {
 };
 
 export const dynamic = 'force-dynamic';
+export const runtime = 'edge';
 
 export async function GET(request: Request, { params }: { params: Promise<{ hash: string }> }) {
   const env = process.env;

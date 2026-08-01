@@ -1,5 +1,4 @@
 import { GoogleGenAI } from "@google/genai";
-import crypto from "crypto";
 import { getSupabaseAdmin } from "@/lib/supabase";
 import { Resend } from "resend";
 
@@ -135,18 +134,23 @@ export async function generateOrFetchGuide(
   stripeSessionId: string
 ) {
   const supabaseAdmin = getSupabaseAdmin();
-  
-  const contentHash = crypto
-    .createHash('md5')
-    .update(JSON.stringify(onboardingAnswers))
-    .digest('hex');
+
+  // Simple deterministic hash — edge-compatible, no crypto module needed
+  const rawKey = JSON.stringify(onboardingAnswers);
+  let contentHash = 0;
+  for (let i = 0; i < rawKey.length; i++) {
+    contentHash = ((contentHash << 5) - contentHash) + rawKey.charCodeAt(i);
+    contentHash |= 0;
+  }
+  const contentHashStr = Math.abs(contentHash).toString(36);
+
 
   // Check cache for existing guide with same content hash
   const { data: cached } = await supabaseAdmin
     .from('guides')
     .select('*')
     .eq('profession_slug', professionSlug)
-    .eq('onboarding_hash', contentHash)
+    .eq('onboarding_hash', contentHashStr)
     .order('created_at', { ascending: false })
     .limit(1)
     .maybeSingle();

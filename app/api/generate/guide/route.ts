@@ -1,3 +1,6 @@
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
+
 import { createClient } from '@supabase/supabase-js';
 import Stripe from 'stripe';
 import { GoogleGenAI } from '@google/genai';

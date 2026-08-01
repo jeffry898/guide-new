@@ -1,3 +1,6 @@
+export const runtime = 'edge';
+export const dynamic = 'force-dynamic';
+
 import { createClient } from '@supabase/supabase-js';
 
 export async function POST(request: Request) {
