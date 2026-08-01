@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import ProfessionCard from '@/components/ProfessionCard';
 import { Profession } from '@/lib/constants';
 import { getProfessions } from '@/lib/professions-api';
-import { ShieldCheck, Zap, TrendingUp, ArrowRight, ShieldAlert, Loader2, Calculator, Sparkles, Award, Lock, CheckCircle2, ChevronDown } from 'lucide-react';
+import { ShieldCheck, Zap, TrendingUp, ArrowRight, ShieldAlert, Loader2, Calculator, Sparkles, Award, Lock, CheckCircle2, ChevronDown, Layers } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
@@ -51,7 +51,7 @@ export default function Home() {
       
       <main className="flex-grow pt-24">
         {/* Hero Section */}
-        <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden px-6 py-20">
+        <section className="relative min-h-[92vh] flex flex-col items-center justify-center overflow-hidden px-6 py-20">
           {/* Background Grid Pattern */}
           <div className="absolute inset-0 z-0 opacity-[0.04]" 
             style={{ 
@@ -93,17 +93,17 @@ export default function Home() {
                 <span className="text-[#C9A84C] drop-shadow-[0_0_20px_rgba(201,168,76,0.2)]">Get Your AI Survival Protocol</span>
               </h1>
               
-              <p className="text-lg md:text-2xl text-gray-300 font-light mb-12 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-2xl text-gray-300 font-light mb-10 leading-relaxed max-w-3xl mx-auto">
                 Don&apos;t get disrupted by autonomous AI agents. Master the specialized systems, prompt architectures, and tools that turn your career into a high-income fortress.
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-16">
+              <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-12">
                 <Link href="/risk-report" className="w-full sm:w-auto">
                   <motion.button 
                     whileHover={{ scale: 1.04, boxShadow: "0 0 40px rgba(201,168,76,0.4)" }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] px-10 py-5 rounded-lg text-lg font-black flex items-center justify-center gap-3 uppercase tracking-widest shadow-2xl transition-all"
+                    className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] px-10 py-5 rounded-lg text-lg font-black flex items-center justify-center gap-3 uppercase tracking-widest shadow-2xl transition-all cursor-pointer"
                   >
                     <span>Get Free Risk Report</span>
                     <ArrowRight className="w-5 h-5" />
@@ -119,6 +119,29 @@ export default function Home() {
                     Explore 20 Protocols
                   </motion.button>
                 </Link>
+              </div>
+
+              {/* 8K AI Engine Feature Display Showcase */}
+              <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border-2 border-[#C9A84C]/40 shadow-[0_30px_90px_rgba(0,0,0,0.9),0_0_50px_rgba(201,168,76,0.25)] group mb-10">
+                <img 
+                  src="/images/hero_ai_engine.jpg" 
+                  alt="GeniuzLab 8K AI Engine Core" 
+                  className="w-full h-[280px] sm:h-[360px] object-cover object-center group-hover:scale-105 transition-transform duration-700 filter contrast-[1.05]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060A14] via-transparent to-black/30 opacity-70" />
+                
+                {/* Floating Glassmorphic Overlay Badge */}
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 bg-[#0A0F1E]/80 backdrop-blur-md border border-[#C9A84C]/40 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                    <span className="text-xs font-mono font-bold text-[#F8F6F0] tracking-wider uppercase">
+                      GENIUZLAB ENGINE v2.4 OPERATIONAL
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono text-[#C9A84C] font-bold tracking-widest uppercase">
+                    20 SECTORS ACTIVE · 99.9% ACCURACY
+                  </span>
+                </div>
               </div>
 
               {/* Quick Trust Checklist */}
@@ -154,7 +177,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Interactive ROI Calculator Section */}
+        {/* Interactive ROI Calculator & 8K Analytics Section */}
         <section className="py-24 px-6 border-y border-[#C9A84C]/20 bg-[#0A0F1E]/80 relative overflow-hidden">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -205,12 +228,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* ROI Results Card */}
-            <div className="lg:col-span-6 bg-[#060A14] border border-[#C9A84C]/40 rounded-2xl p-8 shadow-[0_0_50px_rgba(201,168,76,0.15)] relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#C9A84C]/10 blur-3xl rounded-full" />
+            {/* ROI Results Card & 8K Analytics Display */}
+            <div className="lg:col-span-6 bg-[#060A14] border border-[#C9A84C]/40 rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(201,168,76,0.15)] relative">
+              <div className="relative h-[180px] overflow-hidden border-b border-[#C9A84C]/20">
+                <img 
+                  src="/images/roi_dashboard.jpg" 
+                  alt="8K Analytics Dashboard" 
+                  className="w-full h-full object-cover filter contrast-[1.05]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#060A14] via-transparent to-black/30" />
+                <div className="absolute top-4 left-4 bg-[#0A0F1E]/80 backdrop-blur-md px-3 py-1 rounded text-[10px] font-mono font-bold text-[#C9A84C] border border-[#C9A84C]/30">
+                  REAL-TIME AUTOMATION ANALYTICS
+                </div>
+              </div>
               
-              <div className="text-center space-y-6 relative z-10">
-                <span className="text-xs font-mono font-bold text-gray-400 uppercase tracking-widest">
+              <div className="p-8 text-center space-y-6">
+                <span className="text-xs font-mono font-bold text-gray-400 uppercase tracking-widest block">
                   YOUR ESTIMATED ANNUAL AI RECOVERY VALUE
                 </span>
 
@@ -218,7 +251,7 @@ export default function Home() {
                   £{annualSavings.toLocaleString()} <span className="text-lg text-gray-400 font-mono font-normal">/ year</span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/10 text-left">
+                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-left">
                   <div className="bg-[#0A0F1E] p-4 rounded-lg border border-[#C9A84C]/20">
                     <span className="text-[10px] font-mono text-gray-400 block uppercase">Hours Saved Weekly</span>
                     <span className="text-2xl font-bold font-serif text-[#F8F6F0]">{weeklySaved} Hours</span>
@@ -230,8 +263,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <Link href="/risk-report" className="block pt-4">
-                  <button className="w-full bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] py-4 rounded-lg font-mono font-black text-sm uppercase tracking-widest shadow-xl transition-all flex items-center justify-center gap-2">
+                <Link href="/risk-report" className="block pt-2">
+                  <button className="w-full bg-[#C9A84C] hover:bg-[#E6C875] text-[#060A14] py-4 rounded-lg font-mono font-black text-sm uppercase tracking-widest shadow-xl transition-all flex items-center justify-center gap-2 cursor-pointer">
                     Claim Your Custom Protocol <ArrowRight className="w-4 h-4" />
                   </button>
                 </Link>
@@ -287,9 +320,56 @@ export default function Home() {
           )}
         </section>
 
+        {/* 8K Security Vault Section */}
+        <section className="py-24 px-6 bg-[#0A0F1E] border-t border-[#C9A84C]/20">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-6 rounded-2xl overflow-hidden border-2 border-[#C9A84C]/40 shadow-2xl relative group">
+              <img 
+                src="/images/security_vault.jpg" 
+                alt="8K Security Vault" 
+                className="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-[1.05]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060A14] via-transparent to-black/30" />
+              <div className="absolute bottom-6 left-6 right-6 bg-[#060A14]/80 backdrop-blur-md p-4 rounded-xl border border-[#C9A84C]/30 text-xs font-mono">
+                <span className="text-[#C9A84C] font-bold block uppercase">CLASSIFIED INTELLIGENCE VAULT</span>
+                <span className="text-gray-400 text-[10px]">256-Bit SSL Encrypted Protocol Delivery</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#C9A84C]/10 border border-[#C9A84C]/30 rounded text-[10px] font-mono font-bold text-[#C9A84C] uppercase tracking-widest">
+                <Lock className="w-3.5 h-3.5" /> ENTERPRISE SECURITY & PRIVACY
+              </div>
+
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#F8F6F0] leading-tight">
+                Institutional Grade Privacy & Proprietary Prompt Vault
+              </h2>
+
+              <p className="text-gray-300 text-sm leading-relaxed font-light">
+                Your data and prompt workflows are locked inside an encrypted personal vault. We never share proprietary business blueprints with third parties.
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 pt-4 text-xs font-mono text-gray-300">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#C9A84C]" /> 100% Confidential
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#C9A84C]" /> Lifetime Protocol Updates
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#C9A84C]" /> GeniuzLab Support
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#C9A84C]" /> Instant PDF & Web App
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Global Intelligence Sources */}
-        <section className="py-20 px-6 border-t border-[#C9A84C]/20 bg-[#0A0F1E]">
-          <div className="max-w-6xl mx-auto text-center space-y-10">
+        <section className="py-16 px-6 border-t border-[#C9A84C]/20 bg-[#060A14]">
+          <div className="max-w-6xl mx-auto text-center space-y-8">
             <h3 className="text-xs font-mono text-gray-500 uppercase tracking-[0.4em] font-bold">
               INTELLIGENCE & DATA SOURCES
             </h3>
