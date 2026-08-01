@@ -397,10 +397,12 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-6 text-gray-400">
             <Link href="/risk-report" className="hover:text-[#C9A84C] transition-colors">Free Risk Assessment</Link>
-            <Link href="/dashboard" className="hover:text-[#C9A84C] transition-colors">Purchased Vault</Link>
-            <Link href="/login" className="hover:text-[#C9A84C] transition-colors">Client Login</Link>
+            <Link href="/privacy" className="hover:text-[#C9A84C] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#C9A84C] transition-colors">Terms of Service</Link>
+            <Link href="/refund" className="hover:text-[#C9A84C] transition-colors">30-Day Refund Policy</Link>
+            <Link href="/dashboard" className="hover:text-[#C9A84C] transition-colors">Vault Login</Link>
           </div>
 
           <p className="text-[10px] text-gray-600">
