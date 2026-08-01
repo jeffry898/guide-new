@@ -1,6 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
-import { supabaseAdmin } from "./supabase";
+import { getSupabaseAdmin } from "./supabase";
 import { Resend } from 'resend';
+
 
 let genAIInstance: GoogleGenAI | null = null;
 let resendInstance: Resend | null = null;
@@ -24,6 +25,7 @@ const getResend = () => {
 };
 
 export async function generateGuide(professionSlug: string, userEmail: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data: profession } = await supabaseAdmin
     .from('professions')
     .select('*')
@@ -61,7 +63,7 @@ export async function generateGuide(professionSlug: string, userEmail: string) {
 
   const ai = getGenAI();
   const response = await ai.models.generateContent({
-    model: "gemini-3-flash-preview",
+    model: "gemini-2.0-flash",
     contents: prompt,
     config: { responseMimeType: "application/json" }
   });

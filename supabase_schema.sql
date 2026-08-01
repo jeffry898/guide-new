@@ -1,3 +1,14 @@
+-- Professions Table
+CREATE TABLE IF NOT EXISTS public.professions (
+  id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
+  name text NOT NULL,
+  slug text UNIQUE NOT NULL,
+  price numeric NOT NULL,
+  automation_risk integer NOT NULL,
+  industry_data jsonb NOT NULL,
+  created_at timestamp with time zone DEFAULT now()
+);
+
 -- Purchases Table
 CREATE TABLE IF NOT EXISTS public.purchases (
   id uuid DEFAULT gen_random_uuid() PRIMARY KEY,
@@ -32,6 +43,7 @@ CREATE TABLE IF NOT EXISTS public.report_leads (
 );
 
 -- Enable RLS
+ALTER TABLE public.professions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.purchases ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.guides ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.report_leads ENABLE ROW LEVEL SECURITY;
@@ -39,6 +51,10 @@ ALTER TABLE public.report_leads ENABLE ROW LEVEL SECURITY;
 -- Allow public read for guides by hash
 DROP POLICY IF EXISTS "Public read guides by hash" ON public.guides;
 CREATE POLICY "Public read guides by hash" ON public.guides FOR SELECT USING (true);
+
+-- Allow public read for professions
+DROP POLICY IF EXISTS "Public read professions" ON public.professions;
+CREATE POLICY "Public read professions" ON public.professions FOR SELECT USING (true);
 
 -- Allow system writes (service role handles this, but for completeness if using anon for parts)
 -- The getSupabaseAdmin() uses service role, so RLS doesn't block it by default if configured correctly.

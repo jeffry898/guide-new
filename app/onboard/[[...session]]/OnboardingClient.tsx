@@ -46,12 +46,22 @@ export default function OnboardingClient() {
   const finishOnboarding = async (finalAnswers: string[]) => {
     setLoading(true);
     try {
-      const response = await fetch('/api/guide/generate', {
+      let queryProfession = '';
+      let queryEmail = '';
+      if (typeof window !== 'undefined') {
+        const searchParams = new URLSearchParams(window.location.search);
+        queryProfession = searchParams.get('profession') || '';
+        queryEmail = searchParams.get('email') || '';
+      }
+
+      const response = await fetch('/api/generate/guide', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           sessionId: session,
-          answers: finalAnswers
+          answers: finalAnswers,
+          professionSlug: queryProfession,
+          userEmail: queryEmail
         })
       });
 
@@ -61,9 +71,9 @@ export default function OnboardingClient() {
       } else {
         throw new Error(data.error || 'Generation failed');
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Onboarding finish error:', error);
-      alert('Generation failed. Please contact support.');
+      alert('Generation failed: ' + (error.message || 'Please contact support.'));
       setLoading(false);
     }
   };

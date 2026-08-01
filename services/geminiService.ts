@@ -1,6 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 import crypto from "crypto";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
 import { Resend } from "resend";
 
 let genAIInstance: GoogleGenAI | null = null;
@@ -134,17 +134,19 @@ export async function generateOrFetchGuide(
   userEmail: string,
   stripeSessionId: string
 ) {
+  const supabaseAdmin = getSupabaseAdmin();
+  
   const contentHash = crypto
     .createHash('md5')
     .update(JSON.stringify(onboardingAnswers))
     .digest('hex');
 
-  // Check cache
+  // Check cache for existing guide with same content hash
   const { data: cached } = await supabaseAdmin
     .from('guides')
     .select('*')
     .eq('profession_slug', professionSlug)
-    .eq('content_hash', contentHash)
+    .eq('onboarding_hash', contentHash)
     .order('created_at', { ascending: false })
     .limit(1)
     .maybeSingle();
@@ -155,10 +157,8 @@ export async function generateOrFetchGuide(
       user_email: userEmail,
       profession_slug: professionSlug,
       onboarding_hash: urlToken,
-      content_hash: contentHash,
       content: cached.content,
       stripe_session_id: stripeSessionId,
-      served_count: 1
     });
 
     await supabaseAdmin
@@ -178,7 +178,6 @@ export async function generateOrFetchGuide(
 
   if (!profession) throw new Error("Invalid profession slug");
 
-  // We reuse the existing prompt logic
   const content = await callGeminiWithRetry(profession, onboardingAnswers);
   const urlToken = generateUrlToken();
 
@@ -186,18 +185,17 @@ export async function generateOrFetchGuide(
     user_email: userEmail,
     profession_slug: professionSlug,
     onboarding_hash: urlToken,
-    content_hash: contentHash,
     content: content,
     stripe_session_id: stripeSessionId,
-    served_count: 1
   });
 
   return urlToken;
 }
 
 async function callGeminiWithRetry(profession: any, onboarding: any) {
+  const supabaseAdmin = getSupabaseAdmin();
   let attempts = 0;
-  let lastError = null;
+  let lastError: any = null;
 
   while (attempts < 3) {
     attempts++;
@@ -205,7 +203,7 @@ async function callGeminiWithRetry(profession: any, onboarding: any) {
       const prompt = buildMasterPrompt(profession, onboarding);
       const ai = getGenAI();
       const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
+        model: "gemini-2.0-flash",
         contents: prompt,
         config: { responseMimeType: "application/json" }
       });
@@ -223,12 +221,14 @@ async function callGeminiWithRetry(profession: any, onboarding: any) {
     }
   }
 
-  // Log error to DB
-  await supabaseAdmin.from('errors').insert({
-    service: 'gemini_generation',
-    error_message: lastError?.message || "Unknown error",
-    context: { profession, onboarding }
-  });
+  // Log error to DB (non-blocking)
+  try {
+    await supabaseAdmin.from('errors').insert({
+      service: 'gemini_generation',
+      error_message: lastError?.message || "Unknown error",
+      context: { profession: profession?.slug, onboarding }
+    });
+  } catch {}
 
   throw lastError || new Error("Failed to generate guide");
 }
@@ -239,8 +239,5 @@ export async function generateGuide(
   professionSlug: string,
   triggerData?: any
 ) {
-  // This is the old function, keeping it for compatibility but redirecting to new logic if possible
-  // Wait, the old one didn't have userEmail/stripeSessionId.
-  // I'll keep the core logic but it might be deprecated.
   return callGeminiWithRetry(profession, onboarding);
 }

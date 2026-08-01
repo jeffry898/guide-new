@@ -2,5 +2,7 @@
   "name": "GeniuzLab Guidr Empire",
   "description": "Premium self-building digital guide marketplace for AI survival strategies across 20+ professions.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

@@ -1,7 +1,8 @@
-import { supabaseAdmin } from './supabase';
+import { getSupabaseAdmin } from './supabase';
 
 // Professions
 export async function getProfession(slug: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data } = await supabaseAdmin
     .from('professions')
     .select('*')
@@ -11,6 +12,7 @@ export async function getProfession(slug: string) {
 }
 
 export async function getAllProfessions() {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data } = await supabaseAdmin
     .from('professions')
     .select('*')
@@ -20,7 +22,6 @@ export async function getAllProfessions() {
 
 export async function getProfessionPackages(slug: string) {
   const profession = await getProfession(slug);
-  // In a real app, this might come from a DB table 'packages'
   return [
     { id: 'standard', name: 'Standard AI Protocol', price: profession?.price || 49, features: ['Dashboard Access', 'PDF Export'] },
     { id: 'premium', name: 'Premium Implementation', price: (profession?.price || 49) * 3, features: ['1-on-1 Setup', 'Priority Support'] }
@@ -29,6 +30,7 @@ export async function getProfessionPackages(slug: string) {
 
 // Guides
 export async function getGuideByHash(professionSlug: string, hash: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from('guides')
     .select('*')
@@ -41,6 +43,7 @@ export async function getGuideByHash(professionSlug: string, hash: string) {
 }
 
 export async function saveGuide(professionSlug: string, hash: string, contentJson: any, userEmail: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from('guides')
     .insert([{
@@ -58,6 +61,7 @@ export async function saveGuide(professionSlug: string, hash: string, contentJso
 }
 
 export async function getGuideById(id: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from('guides')
     .select('*')
@@ -69,10 +73,11 @@ export async function getGuideById(id: string) {
 }
 
 export async function incrementServedCount(id: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { error } = await supabaseAdmin.rpc('increment_served_count', { row_id: id });
   if (error) {
-    // Fallback if RPC doesn't exist yet
-    const { data: guide } = await getGuideById(id);
+    // Fallback if RPC doesn't exist yet — fetch guide directly and update
+    const guide = await getGuideById(id);
     if (guide) {
       await supabaseAdmin
         .from('guides')
@@ -83,17 +88,20 @@ export async function incrementServedCount(id: string) {
 }
 
 // Purchases
-export async function createPendingPurchase(data: { 
+export async function createPendingPurchase(purchaseData: { 
   user_email: string; 
-  guide_id: string; 
+  guide_id?: string;
+  profession_slug?: string;
   stripe_session_id?: string;
+  amount?: number;
   status?: string;
 }) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data: purchase, error } = await supabaseAdmin
     .from('purchases')
     .insert([{
-      ...data,
-      status: data.status || 'pending'
+      ...purchaseData,
+      status: purchaseData.status || 'pending'
     }])
     .select()
     .single();
@@ -102,16 +110,18 @@ export async function createPendingPurchase(data: {
   return purchase;
 }
 
-export async function completePurchase(stripeSessionId: string, guideId: string) {
+export async function completePurchase(stripeSessionId: string, professionSlug: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { error } = await supabaseAdmin
     .from('purchases')
     .update({ status: 'completed' })
-    .match({ stripe_session_id: stripeSessionId, guide_id: guideId });
+    .match({ stripe_session_id: stripeSessionId, profession_slug: professionSlug });
     
   if (error) throw error;
 }
 
 export async function getUserPurchases(userEmail: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from('purchases')
     .select('*, guides(*)')
@@ -123,6 +133,7 @@ export async function getUserPurchases(userEmail: string) {
 }
 
 export async function verifyUserOwnsGuide(userEmail: string, guideId: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { data, error } = await supabaseAdmin
     .from('purchases')
     .select('id')
@@ -134,14 +145,32 @@ export async function verifyUserOwnsGuide(userEmail: string, guideId: string) {
   return !!data && !error;
 }
 
-// Leads
-export async function saveLead(email: string, professionSlug: string, serviceInterest: string) {
+// Leads / Report Leads
+export async function saveReportLead(email: string, professionSlug: string, answers: any, token: string) {
+  const supabaseAdmin = getSupabaseAdmin();
   const { error } = await supabaseAdmin
-    .from('leads')
+    .from('report_leads')
     .insert([{
       email,
       profession_slug: professionSlug,
-      service_interest: serviceInterest
+      answers,
+      token,
+      email_sequence_step: 1
+    }]);
+    
+  if (error) throw error;
+}
+
+export async function saveLead(email: string, professionSlug: string, serviceInterest: string) {
+  const supabaseAdmin = getSupabaseAdmin();
+  const { error } = await supabaseAdmin
+    .from('report_leads')
+    .insert([{
+      email,
+      profession_slug: professionSlug,
+      answers: { service_interest: serviceInterest },
+      token: crypto.randomUUID(),
+      email_sequence_step: 1
     }]);
     
   if (error) throw error;
