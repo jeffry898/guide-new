@@ -1,6 +1,3 @@
-﻿export const runtime = 'edge';
-export const dynamic = 'force-dynamic';
-
 import OnboardingClient from './OnboardingClient';
 
 export default function OnboardingPage() {

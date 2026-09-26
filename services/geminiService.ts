@@ -1,5 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
-import { getSupabaseAdmin } from "@/lib/supabase";
+import crypto from "crypto";
+import { supabaseAdmin } from "@/lib/supabase";
 import { Resend } from "resend";
 
 let genAIInstance: GoogleGenAI | null = null;
@@ -42,44 +43,38 @@ export interface ProfessionData {
 }
 
 function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingData, triggerData?: any) {
-  return `You are the world's elite AI Systems Architect and High-Ticket Business Consultant specializing in ${profession.name}s, having engineered AI operational transformations for 10,000+ top-tier firms.
+  return `You are the world's leading AI business strategist 
+  specializing in ${profession.name}s with 10,000+ 
+  client case studies.
 
-  TARGET PROFESSIONAL CONTEXT:
-  - Industry / Role: ${profession.name}
-  - Core Challenge: ${onboarding.challenge || 'Scaling revenue while eliminating 80% of manual admin overload'}
-  - Team Scale: ${onboarding.team_size || '1-5'}
-  - Growth Target: ${onboarding.target || 'High Growth'}
-  - Revenue Benchmarks: ${profession.avg_revenue_client}
-  - Current Tool Stack: ${JSON.stringify(profession.industry_tools)}
-  - Operational Pain Points: ${JSON.stringify(profession.pain_points)}
-  - Industry Automation Threat Level: ${profession.wef_automation_risk}%
+  THIS PERSON:
+  - Challenge: ${onboarding.challenge}
+  - Team size: ${onboarding.team_size}
+  - Monthly target: ${onboarding.target}
+  - Found via: ${triggerData?.keyword || 'direct'}
 
-  YOUR GOAL:
-  Generate an elite, $1,000-value Masterclass Protocol & Interactive Execution Guide titled '${profession.psychological_title}'.
-  This protocol MUST provide extreme, non-generic, actionable value with ready-to-run prompt templates, step-by-step system setup guides, and variable tags for immediate sandbox testing.
+  PROFESSION DATA:
+  - Avg revenue/client: ${profession.avg_revenue_client}
+  - Industry tools: ${JSON.stringify(profession.industry_tools)}
+  - Pain points: ${JSON.stringify(profession.pain_points)}
+  - WEF automation risk: ${profession.wef_automation_risk}%
 
-  CRITICAL QUALITY & CONTENT RULES:
-  1. DO NOT write surface-level advice or generic AI summaries. Write precise, professional SOPs and copy-paste prompt scripts.
-  2. Include EXACT VARIABLE BRACKETS inside prompts like [CLIENT_NAME], [PROJECT_SCOPE], [TARGET_METRIC], [SERVICE_OFFERING] so users can test them interactively.
-  3. Provide 5 DISTINCT AI Systems, each with 3-4 concrete step-by-step setup instructions.
-  4. Provide 5 MASTER EXECUTION PROMPTS with custom variable definitions.
+  Generate guide titled: '${profession.psychological_title}'
 
-  STRICT JSON OUTPUT REQUIRED:
-  Return VALID JSON ONLY. NO MARKDOWN WRAPPER, NO PREAMBLE.
-  Follow this exact schema:
+  RETURN VALID JSON ONLY. NO MARKDOWN. NO PREAMBLE:
   {
     "hero": {
-      "title": "string",
-      "subtitle": "string",
-      "stat": "string",
-      "stat_source": "string"
+      "title": string,
+      "subtitle": string,
+      "stat": string,
+      "stat_source": string
     },
     "reality_check": {
-      "headline": "string",
-      "insight": "string",
+      "headline": string,
+      "insight": string,
       "chart": {
-        "title": "string",
-        "labels": ["Current Manual Ops", "With AI Systems Layer"],
+        "title": string,
+        "labels": ["Current", "With AI Systems"],
         "admin_time": [number, number],
         "core_work": [number, number],
         "revenue_growth": [number, number]
@@ -87,58 +82,44 @@ function buildMasterPrompt(profession: ProfessionData, onboarding: OnboardingDat
     },
     "ai_systems": [
       {
-        "title": "string",
-        "description": "string",
+        "title": string,
+        "description": string,
         "time_saved_weekly": number,
-        "free_tool": "string",
-        "free_tool_url": "string",
-        "prompt_snippet": "string",
-        "geniuzlab_upgrade": "string",
-        "icon": "string",
-        "architecture_steps": ["Step 1...", "Step 2...", "Step 3...", "Step 4..."]
-      }
-    ],
-    "prompt_templates": [
-      {
-        "title": "string",
-        "use_case": "string",
-        "target_tool": "string",
-        "prompt": "Full master prompt with [VARIABLE_1], [VARIABLE_2] placeholders...",
-        "variables": ["VARIABLE_1", "VARIABLE_2"],
-        "setup_instructions": "How to configure and run this prompt in ChatGPT / Claude / Cursor"
+        "free_tool": string,
+        "free_tool_url": string,
+        "geniuzlab_upgrade": string,
+        "icon": string
       }
     ],
     "roi": {
       "hours_saved_weekly": number,
       "annual_value": number,
-      "insight": "string"
+      "insight": string
     },
     "roadmap": {
       "weeks": [
         {
-          "week": 1,
-          "theme": "string",
-          "actions": ["Action item 1", "Action item 2", "Action item 3"],
-          "key_deliverable": "string",
-          "time_saved_estimate": "e.g. 5 Hours/Week Saved"
+          "week": number,
+          "theme": string,
+          "actions": [string, string, string]
         }
       ]
     },
     "geniuzlab": {
-      "headline": "string",
-      "body": "string",
+      "headline": string,
+      "body": string,
       "services": [
         {
-          "name": "string",
-          "description": "string",
-          "icon": "string"
+          "name": string,
+          "description": string,
+          "icon": string
         }
       ],
-      "cta": "string"
+      "cta": string
     },
     "closing": {
-      "statement": "string",
-      "share_text": "string"
+      "statement": string,
+      "share_text": string
     }
   }`;
 }
@@ -153,24 +134,17 @@ export async function generateOrFetchGuide(
   userEmail: string,
   stripeSessionId: string
 ) {
-  const supabaseAdmin = getSupabaseAdmin();
+  const contentHash = crypto
+    .createHash('md5')
+    .update(JSON.stringify(onboardingAnswers))
+    .digest('hex');
 
-  // Simple deterministic hash — edge-compatible, no crypto module needed
-  const rawKey = JSON.stringify(onboardingAnswers);
-  let contentHash = 0;
-  for (let i = 0; i < rawKey.length; i++) {
-    contentHash = ((contentHash << 5) - contentHash) + rawKey.charCodeAt(i);
-    contentHash |= 0;
-  }
-  const contentHashStr = Math.abs(contentHash).toString(36);
-
-
-  // Check cache for existing guide with same content hash
+  // Check cache
   const { data: cached } = await supabaseAdmin
     .from('guides')
     .select('*')
     .eq('profession_slug', professionSlug)
-    .eq('onboarding_hash', contentHashStr)
+    .eq('content_hash', contentHash)
     .order('created_at', { ascending: false })
     .limit(1)
     .maybeSingle();
@@ -181,8 +155,10 @@ export async function generateOrFetchGuide(
       user_email: userEmail,
       profession_slug: professionSlug,
       onboarding_hash: urlToken,
+      content_hash: contentHash,
       content: cached.content,
       stripe_session_id: stripeSessionId,
+      served_count: 1
     });
 
     await supabaseAdmin
@@ -202,6 +178,7 @@ export async function generateOrFetchGuide(
 
   if (!profession) throw new Error("Invalid profession slug");
 
+  // We reuse the existing prompt logic
   const content = await callGeminiWithRetry(profession, onboardingAnswers);
   const urlToken = generateUrlToken();
 
@@ -209,17 +186,18 @@ export async function generateOrFetchGuide(
     user_email: userEmail,
     profession_slug: professionSlug,
     onboarding_hash: urlToken,
+    content_hash: contentHash,
     content: content,
     stripe_session_id: stripeSessionId,
+    served_count: 1
   });
 
   return urlToken;
 }
 
 async function callGeminiWithRetry(profession: any, onboarding: any) {
-  const supabaseAdmin = getSupabaseAdmin();
   let attempts = 0;
-  let lastError: any = null;
+  let lastError = null;
 
   while (attempts < 3) {
     attempts++;
@@ -227,7 +205,7 @@ async function callGeminiWithRetry(profession: any, onboarding: any) {
       const prompt = buildMasterPrompt(profession, onboarding);
       const ai = getGenAI();
       const response = await ai.models.generateContent({
-        model: "gemini-2.0-flash",
+        model: "gemini-3-flash-preview",
         contents: prompt,
         config: { responseMimeType: "application/json" }
       });
@@ -245,14 +223,12 @@ async function callGeminiWithRetry(profession: any, onboarding: any) {
     }
   }
 
-  // Log error to DB (non-blocking)
-  try {
-    await supabaseAdmin.from('errors').insert({
-      service: 'gemini_generation',
-      error_message: lastError?.message || "Unknown error",
-      context: { profession: profession?.slug, onboarding }
-    });
-  } catch {}
+  // Log error to DB
+  await supabaseAdmin.from('errors').insert({
+    service: 'gemini_generation',
+    error_message: lastError?.message || "Unknown error",
+    context: { profession, onboarding }
+  });
 
   throw lastError || new Error("Failed to generate guide");
 }
@@ -263,5 +239,8 @@ export async function generateGuide(
   professionSlug: string,
   triggerData?: any
 ) {
+  // This is the old function, keeping it for compatibility but redirecting to new logic if possible
+  // Wait, the old one didn't have userEmail/stripeSessionId.
+  // I'll keep the core logic but it might be deprecated.
   return callGeminiWithRetry(profession, onboarding);
 }

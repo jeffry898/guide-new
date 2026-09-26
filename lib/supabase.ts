@@ -308,7 +308,4 @@ export const getSupabaseAdmin = () => {
   return supabaseAdminInstance;
 };
 
-// NOTE: supabaseAdmin is now a lazy getter — do NOT call getSupabaseAdmin() at module level
-// It was previously exported as a singleton which crashes on Cloudflare Pages edge runtime
-// Use getSupabaseAdmin() inside functions only
-
+export const supabaseAdmin = getSupabaseAdmin();
